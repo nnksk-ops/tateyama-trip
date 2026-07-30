@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>立山 一泊二日リサーチ｜2026/8/22–23・4名・大津京発</title>
+<style>
+:root{
+  --bg:#0f1417; --card:#171e23; --card2:#1d262c; --line:#2a353d;
+  --tx:#e8eef2; --tx2:#a5b4bf; --tx3:#77878f;
+  --gold:#e3b04b; --royal:#4a9ede; --hidden:#7ed4a6; --warn:#e57373;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:-apple-system,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;line-height:1.75;font-size:15px}
+.wrap{max-width:1060px;margin:0 auto;padding:28px 18px 80px}
+header{border-bottom:1px solid var(--line);padding-bottom:20px;margin-bottom:8px}
+h1{font-size:1.6rem;margin:0 0 6px;letter-spacing:.02em}
+.sub{color:var(--tx2);font-size:.9rem}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.chip{background:var(--card2);border:1px solid var(--line);border-radius:999px;padding:3px 12px;font-size:.8rem;color:var(--tx2)}
+
+nav.toc{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:22px 0 10px}
+nav.toc a{color:var(--royal);text-decoration:none;font-size:.85rem;margin-right:14px;white-space:nowrap;display:inline-block}
+nav.toc a:hover{text-decoration:underline}
+
+.filters{position:sticky;top:0;z-index:20;background:rgba(15,20,23,.94);backdrop-filter:blur(8px);padding:12px 0;margin:14px 0 4px;border-bottom:1px solid var(--line)}
+.filters button{background:var(--card2);border:1px solid var(--line);color:var(--tx2);border-radius:999px;padding:6px 16px;font-size:.85rem;cursor:pointer;margin-right:8px;font-family:inherit}
+.filters button.on{background:var(--tx);color:#0f1417;border-color:var(--tx);font-weight:600}
+.fhint{color:var(--tx3);font-size:.78rem;margin-left:4px}
+
+h2{font-size:1.22rem;margin:44px 0 4px;padding-bottom:8px;border-bottom:2px solid var(--line)}
+h2 .num{color:var(--tx3);font-size:.85rem;margin-right:8px;font-weight:400}
+h3{font-size:1rem;margin:26px 0 10px;color:var(--tx2);font-weight:600}
+.lead{color:var(--tx2);font-size:.88rem;margin:10px 0 16px}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px;position:relative}
+.card.royal{border-left:3px solid var(--royal)}
+.card.hidden{border-left:3px solid var(--hidden)}
+.card h4{margin:0 0 4px;font-size:.98rem;display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.tag{font-size:.66rem;padding:2px 7px;border-radius:4px;font-weight:700;letter-spacing:.04em;white-space:nowrap}
+.tag.r{background:rgba(74,158,222,.16);color:var(--royal)}
+.tag.h{background:rgba(126,212,166,.16);color:var(--hidden)}
+.spec{color:var(--gold);font-size:.78rem;margin:4px 0 6px;font-variant-numeric:tabular-nums}
+.card p{margin:0 0 8px;font-size:.86rem;color:var(--tx2)}
+.card a{color:var(--royal);font-size:.78rem;text-decoration:none;display:inline-block;margin-right:10px}
+.card a:hover{text-decoration:underline}
+.card a::before{content:"↗ "}
+.yt a::before{content:"▶ "}
+.yt a{color:#ff8a80}
+
+table{width:100%;border-collapse:collapse;font-size:.85rem;margin:10px 0 6px;display:block;overflow-x:auto;white-space:nowrap}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left}
+th{background:var(--card2);color:var(--tx2);font-weight:600;font-size:.8rem}
+td{color:var(--tx2)}
+td strong{color:var(--tx)}
+
+.box{background:var(--card2);border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:8px;padding:14px 16px;margin:16px 0;font-size:.87rem;color:var(--tx2)}
+.box.warn{border-left-color:var(--warn)}
+.box b{color:var(--tx)}
+.box ul{margin:8px 0 0;padding-left:20px}
+.box li{margin:4px 0}
+
+.plan{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px;margin-bottom:12px}
+.plan h4{margin:0 0 10px;font-size:.98rem}
+.plan ol{margin:0;padding-left:20px;font-size:.86rem;color:var(--tx2)}
+.plan li{margin:5px 0}
+.t{color:var(--gold);font-variant-numeric:tabular-nums;font-weight:600}
+
+footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);color:var(--tx3);font-size:.78rem}
+.hide{display:none !important}
+@media(max-width:600px){.wrap{padding:18px 14px 60px}h1{font-size:1.3rem}}
+</style>
+</head>
+<body>
+
+<style id="sitenav-css">
+#sitenav{background:#11181d;border-bottom:1px solid #2a353d;padding:8px 16px;font-family:-apple-system,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+#sitenav a{color:#a3b3be;text-decoration:none;font-size:.78rem;padding:4px 11px;border-radius:999px;border:1px solid #2a353d;white-space:nowrap}
+#sitenav a:hover{color:#e9eff3;border-color:#4a9ede}
+#sitenav a.here{background:#e9eff3;color:#0e1316;border-color:#e9eff3;font-weight:700}
+@media print{#sitenav{display:none}}
+</style>
+<div id="sitenav"><a href="./" style="font-weight:700;color:#e3b04b;border-color:transparent">🏔 立山 2026/8/22–23</a><a href="plan.html">プランを作る</a><a href="guide.html">資料（写真・図解）</a><a href="notes.html" class="here">資料（テキスト）</a></div>
+
+<div class="wrap">
+
+<header>
+  <h1>立山・富山 一泊二日 リサーチ資料</h1>
+  <div class="sub">2026年8月22日（土）〜23日（日）／4名／大津京発・車（大阪組は電車で滋賀合流）</div>
+  <div class="meta">
+    <span class="chip">登山：室堂周辺トレッキング＋縦走＋立山以外も</span>
+    <span class="chip">温泉：マスト</span>
+    <span class="chip">宿：1.5万円以下</span>
+    <span class="chip">混雑回避重視</span>
+    <span class="chip">王道 / 穴場 2パターン</span>
+  </div>
+</header>
+
+<nav class="toc">
+  <a href="#s0">0. 前提・注意</a>
+  <a href="#s1">1. アクセス</a>
+  <a href="#s2">2. 登山</a>
+  <a href="#s3">3. 温泉</a>
+  <a href="#s4">4. 宿</a>
+  <a href="#s5">5. グルメ</a>
+  <a href="#s6">6. 絶景・観光</a>
+  <a href="#s7">7. 動画</a>
+  <a href="#s8">8. モデル行程案</a>
+  <a href="#s9">9. 出典</a>
+</nav>
+
+<div class="filters">
+  <button class="on" data-f="all">すべて表示</button>
+  <button data-f="royal">王道のみ</button>
+  <button data-f="hidden">穴場のみ</button>
+  <span class="fhint">※候補カードを絞り込みます</span>
+</div>
+
+<!-- ============ 0 ============ -->
+<h2 id="s0"><span class="num">00</span>まず押さえるべき前提と落とし穴</h2>
+<div class="box warn">
+  <b>2026年8月の時点で「使えないもの」— 計画前に必ず確認</b>
+  <ul>
+    <li><b>黒部峡谷鉄道は欅平まで行けません。</b>能登半島地震の鐘釣橋被災で、2026年シーズンも当面「宇奈月〜猫又の折り返し運転」。全線再開は<b>2026年10月1日</b>から。→ 祖母谷温泉・名剣温泉といった<b>欅平の秘湯は8月は事実上アクセス不可</b>。黒薙行きも9月1日乗車分からの受付。</li>
+    <li><b>黒部宇奈月キャニオンルートは2026年10月2日開通。</b>8月は不可。</li>
+    <li><b>雪の大谷は6月25日で終了。</b>8月は雪の壁なし。</li>
+    <li><b>8/22は土曜。</b>立山ケーブルカーが最大のボトルネック（輸送力小＋マイカー客集中）。WEBきっぷ事前購入＋始発前行動がほぼ必須。</li>
+  </ul>
+</div>
+<div class="box">
+  <b>8月下旬の室堂の実像</b>
+  <ul>
+    <li>気温は<b>おおむね10〜20℃</b>。午前は晴れやすく、<b>午後はガス・夕立</b>で急に冷える。長袖＋薄手フリース＋レインウェアは必携。</li>
+    <li>8月下旬は<b>紅葉の走り</b>（チングルマ・ナナカマドが色づき始め）。高山植物と初期紅葉が同時に見られる、実はおいしい時期。</li>
+    <li><b>雷鳥</b>は7〜8月がヒナ連れシーズン。みくりが池温泉テラス直下、ミドリガ池横の尾根、ホテル立山横〜天狗平の歩道脇のハイマツ帯が定番ポイント。</li>
+    <li><b>黒部ダム観光放水</b>は6/26〜10/15。行程に組み込めば見られる。</li>
+  </ul>
+</div>
+
+<!-- ============ 1 ============ -->
+<h2 id="s1"><span class="num">01</span>アクセス・料金・混雑回避</h2>
+<p class="lead">大津京 → 立山駅は概算 <b>約300km / 高速利用で4時間〜4時間半</b>（京都東IC→名神→米原JCT→北陸道→立山IC→立山駅 約31km）。休憩込みで5時間見ておくのが安全。往路で五箇山を挟むなら東海北陸道経由も選択肢。</p>
+
+<h3>アルペンルート料金（2026年改定後・大人）</h3>
+<table>
+<tr><th>区間</th><th>片道</th><th>往復</th><th>内訳</th></tr>
+<tr><td><strong>立山駅 ⇄ 室堂</strong></td><td>4,090円</td><td><strong>8,180円</strong></td><td>立山ケーブルカー1,090円＋立山高原バス3,000円</td></tr>
+<tr><td>立山駅 ⇄ 黒部湖（黒部ダム）</td><td>9,140円</td><td><strong>16,480円</strong></td><td>往復割引あり</td></tr>
+<tr><td>立山駅 ⇄ 扇沢（長野側通り抜け）</td><td>10,940円</td><td>19,680円</td><td>車回送サービス併用が前提</td></tr>
+<tr><td>立山駅 ⇄ 弥陀ヶ原</td><td>—</td><td>—</td><td>室堂より安価。公式運賃検索で確認</td></tr>
+</table>
+<div class="grid">
+  <div class="card royal" data-k="royal">
+    <h4>WEBきっぷ<span class="tag r">王道・ほぼ必須</span></h4>
+    <div class="spec">事前購入で立山駅発の乗車時刻を指定できる</div>
+    <p>当日券は「並んでも予定の便に乗れない」ことがある。お盆〜夏の土日は午前4〜6時に並ぶ人も出る。4人分をまとめて事前確保するのが最大の混雑対策。</p>
+    <a href="https://www.alpen-route.com/webticket/">WEBきっぷ公式</a>
+    <a href="https://tateyama-kurobe-webservice.jp/AlpenTour/html/VW001W0010.html">予約サイト</a>
+  </div>
+  <div class="card royal" data-k="royal">
+    <h4>立山駅 無料駐車場<span class="tag r">王道</span></h4>
+    <div class="spec">約900台・無料</div>
+    <p>台数は多いが8月の土曜は早朝で埋まる想定。深夜〜早朝着で車中待機 → 始発ケーブルという動き方が現実的。</p>
+    <a href="https://www.alpen-route.com/access_new/access/parking.html">駐車場情報</a>
+  </div>
+  <div class="card hidden" data-k="hidden">
+    <h4>室堂直行バス<span class="tag h">穴場ワザ</span></h4>
+    <div class="spec">立山駅前 → 室堂 乗り換えなし・座れる</div>
+    <p>特定日のみ運行の期間限定便。乗り換え待ちのストレスがゼロになる。8/22–23の運行有無は要確認（2025年は8/8–11に運行）。WEBきっぷ限定。</p>
+    <a href="https://www.alpen-route.com/_wp/information">運行お知らせ一覧</a>
+  </div>
+  <div class="card hidden" data-k="hidden">
+    <h4>混雑予想カレンダー<span class="tag h">地味に有能</span></h4>
+    <div class="spec">日別の混雑度を公式が公開</div>
+    <p>8/22–23の予想を見て、室堂入りの時刻を決める材料に。</p>
+    <a href="https://www.alpen-route.com/information/calendar/">混雑予想</a>
+    <a href="https://www.tozan-diary.com/entry/tateyama-kurobe-alpine-route-tips">混雑攻略法の解説記事</a>
+  </div>
+  <div class="card hidden" data-k="hidden">
+    <h4>手荷物回送・車回送<span class="tag h">通り抜けするなら</span></h4>
+    <div class="spec">立山駅で車を預けて扇沢で受け取り</div>
+    <p>長野側へ抜けるプランを取るなら立山トラフィックサービス。荷物だけ送るアルペンポーターサービスもあり、身軽に縦走できる。</p>
+    <a href="https://tateyama-traffic.jp/">立山トラフィックサービス</a>
+    <a href="https://www.alpen-route.com/information/forwarding.html">手荷物回送</a>
+  </div>
+  <div class="card royal" data-k="royal">
+    <h4>ライブカメラ<span class="tag r">前日判断に</span></h4>
+    <div class="spec">室堂平・弥陀ヶ原・大観峰・立山山頂</div>
+    <p>出発前夜と当日朝に必ず確認。富山テレビの室堂お天気カメラはYouTubeで24時間ライブ配信。</p>
+    <a href="https://www.alpen-route.com/live_camera/murodou.html">室堂平カメラ</a>
+    <a href="https://www.youtube.com/watch?v=IAdFjoGEoII">室堂ライブ配信</a>
+  </div>
+</div>
+
+<!-- ============ 2 ============ -->
+<h2 id="s2"><span class="num">02</span>登山・トレッキング候補</h2>
+<p class="lead">「室堂周辺トレッキング」「縦走・上級」「立山以外の穴場山域」の3系統で候補を並べました。標高2,450mの室堂までバスで一気に上がれるのが立山の反則的な強みです。</p>
+
+<h3>A. 室堂発・王道ライン</h3>
+<div class="grid">
+  <div class="card royal" data-k="royal">
+    <h4>雄山（3,003m）往復<span class="tag r">王道No.1</span></h4>
+    <div class="spec">室堂→一ノ越→雄山／往復4〜5時間・標高差約550m</div>
+    <p>富山の小学生が毎年登る初心者向け3,000m。一ノ越から上は岩とザレのジグザグ登り。山頂の雄山神社峰本社で祈祷を受けられる。午前中勝負（午後はガスで視界が消える）。</p>
+    <a href="https://yamahack.com/1735">YAMA HACK コース解説</a>
+    <a href="https://yamachizu.jp/article/11278">山と高原地図Web</a>
+    <a href="https://www.alpen-route.com/model_course/course07/">公式・はじめての登山コース</a>
+  </div>
+  <div class="card royal" data-k="royal">
+    <h4>立山三峰縦走＋雷鳥沢周回<span class="tag r">王道・満足度最大</span></h4>
+    <div class="spec">雄山→大汝山3,015m→富士ノ折立→雷鳥沢／約6時間</div>
+    <p>立山の最高点・大汝山を踏んで、稜線から雷鳥沢へ下って温泉に浸かって帰る黄金ルート。下山後にみくりが池に寄れる。1日で「3,000m稜線＋温泉」が成立する。</p>
+    <a href="https://yamatabitips.com/tateyama/">やまたびチップス</a>
+    <a href="https://mountain-dc.com/tateyama-traverse/">立山三峰縦走レポート</a>
+    <a href="https://manyujp.com/ja/tateyama-ja/">1泊2日＋雷鳥沢露天の記録</a>
+  </div>
+  <div class="card royal" data-k="royal">
+    <h4>立山三山 完全縦走（浄土山・雄山・別山）<span class="tag r">王道の1泊2日</span></h4>
+    <div class="spec">1泊2日／3,000m稜線をほぼフル縦走</div>
+    <p>立山信仰では浄土山＝過去、雄山＝現在、別山＝未来。反時計回りに回り雷鳥沢または剱御前小舎で1泊。剱岳の全貌が拝めるのは別山まで行った人だけ。</p>
+    <a href="https://yamatabitabi.com/archives/145692">山旅旅・1泊2日周回レポ</a>
+    <a href="https://walking-in-the-wind.com/trekking/2024/08/12/tateyama-mountain-chain-loop-hike/">周回ハイク記録</a>
+    <a href="https://www.arukou-tateyama.com/course/course05.html">歩こう立山・踏破コース</a>
+  </div>
+  <div class="card royal" data-k="royal">
+    <h4>室堂平 周遊トレッキング<span class="tag r">王道・軽め</span></h4>
+    <div class="spec">みくりが池・みどりが池・血の池・地獄谷展望／1〜2時間・遊歩道</div>
+    <p>登山靴でなくても歩ける整備された道。雷鳥遭遇率も高い。「登る組」と「歩く組」に分かれる場合の受け皿としても優秀。往復30分の平坦コースもあり体力差を吸収できる。</p>
+    <a href="https://www.info-toyama.com/stories/alpenroute-murodou">室堂平の楽しみ方</a>
+    <a href="https://www.alpen-route.com/map_navi/trekking.html">公式トレッキングマップ</a>
+    <a href="https://www.info-toyama.com/articles/shiho-tateyamaharunatu">雷鳥とお花畑編</a>
+  </div>
+</div>
+
+<h3>B. 縦走・上級／穴場ルート</h3>
+<div class="grid">
+  <div class="card hidden" data-k="hidden">
+    <h4>奥大日岳（2,611m）<span class="tag h">穴場・剱の特等席</span></h4>
+    <div class="spec">室堂往復 約7〜8時間／日本二百名山・中級者以上</div>
+    <p>雄山より圧倒的に人が少ないのに、目の前に剱岳が壁のようにそびえる。新室堂乗越からの横引き道は「気持ちのよい道」と評される稜線歩き。混雑を避けて絶景を取るなら第一候補。</p>
+    <a href="https://www.yamakei-online.com/yama-ya/detail.php?id=4193">山と溪谷「室堂から奥大日岳へ」</a>
+    <a href="https://yamachizu.jp/course/544">コースガイド</a>
+    <a href="https://yamahack.com/3061">YAMA HACK</a>
+  </div>
+  <div class="card hidden" data-k="hidden">
+    <h4>大日三山縦走＋大日小屋泊<span class="tag h">穴場の1泊2日・本命候補</span></h4>
+    <div class="spec">1日目 室堂→奥大日→大日小屋 約8時間／2日目 大日岳→称名滝 約4時間</div>
+    <p>電気を引かない<b>「ランプの宿」大日小屋</b>に泊まる。オーナーがギター職人で、夜はランプの下でアコースティックギターが鳴る。下山口が称名滝なので、そのまま日本一の滝を見て帰れる。1泊2食13,000〜15,000円で予算内。営業7月上旬〜9月末。</p>
+    <a href="http://www.dainichigoya.jp/">大日小屋 公式</a>
+    <a href="https://www.funq.jp/randonnee/article/961992/">ランドネ「いつか泊まりたい山小屋」</a>
+    <a href="https://syumatsu-yama.net/blog/okudainichidake.html">縦走レポート</a>
+  </div>
+  <div class="card hidden" data-k="hidden">
+    <h4>五色ヶ原（浄土山→獅子岳→ザラ峠）<span class="tag h">穴場・天上の楽園</span></h4>
+    <div class="spec">室堂→五色ヶ原山荘 7.2km／登り約600m・下り約500m／1泊2日</div>
+    <p>広大な溶岩台地に池塘とお花畑が広がる別世界。人の入りが室堂周辺と桁違いに少ない。山荘は1泊2食11,000円前後。体力度・危険度は★3で、獅子岳の下りとザラ峠の通過に注意。</p>
+    <a href="https://yamap.com/model-courses/23112">YAMAP モデルコース</a>
+    <a href="https://solomountain.me/goshikigahara/">1泊2日レポート（室堂往復）</a>
+    <a href="https://kiccyomu.net/goshikigahara.php">五色ヶ原山荘 宿泊登山記</a>
+  </div>
+  <div class="card hidden" data-k="hidden">
+    <h4>弥陀ヶ原湿原 木道散策<span class="tag h">穴場・ラムサール条約</span></h4>
+    <div class="spec">内回り約40分／外回り約1時間20分／標高1,930m</div>
+    <p>東西4km・南北2kmの火砕流台地に<b>約3,000個の池塘</b>。日本で最も標高の高いラムサール登録湿地。室堂より圧倒的に空いていて、高山蝶や珍しいトンボも見られる。バス代も室堂より安い。</p>
+    <a href="https://midagahara.alpen-route.co.jp/enjoy/enjoy05.php">弥陀ヶ原ホテル・散策ガイド</a>
+    <a href="https://www.info-toyama.com/itineraries/tateyama202402">1泊2日のんびりトレッキング</a>
+    <a href="https://www.arukou-tateyama.com/course/course02.html">歩こう立山・デビュー1日コース</a>
+  </div>
+  <div class="card hidden" data-k="hidden">
+    <h4>大日平（称名滝から）<span class="tag h">穴場・ガキ田</span></h4>
+    <div class="spec">称名平→牛首→大日平／急登600mののち木道</div>
+    <p>「ガキの田」と呼ばれる池塘が点在する湿原。称名滝の登山口から一気に600m登るハードな導入だが、抜けた先は静寂の木道。大日平山荘まで行ける。</p>
+    <a href="https://www.yamakei-online.com/trailhead/detail.php?id=1111">称名滝 登山口情報</a>
+    <a href="https://souraku.jp/home/newpage44html.html">称名平→大日平ルート紹介</a>
+    <a href="https://tozanguchinavi.com/trailhead/trailhead-10223">称名平 駐車場情報</a>
+  </div>
+</div>
+
+<h3>C. 立山以外の山域（混雑ゼロ狙い）</h3>
+<div class="grid">
+  <div class="card hidden" data-k="hidden">
+    <h4>大辻山<span class="tag h">穴場・展望コスパ最強</span></h4>
+    <div class="spec">日帰り／立山・剱岳の展望が抜群なのに人が少ない</div>
+    <p>ブナ林を抜けて稜線に出ると剱岳の堂々たる姿。登山道は整備済みで傾斜も穏やか、初心者OK。アルペンルートの運賃も混雑もゼロで立山連峰を眺められるのが利点。</p>
+    <a href="https://yamachizu.jp/article/12946">富山の初心者おすすめ6座</a>
+    <a href="https://yamap.com/mountains/19580">YAMAP 大辻山</a>
+  </div>
+  <div class="card hidden" data-k="hidden">
+    <h4>鍬崎山<span class="tag h">穴場・静かな展望の山</span></h4>
+    <div class="spec">日帰り／立山連峰南端・富山市街からアクセス良</div>
+    <p>「静かな展望の山」と紹介される通り、人の少なさが最大の魅力。佐々成政の埋蔵金伝説の山でもある。立山山麓温泉とセットにしやすい立地。</p>
+    <a href="https://yamachizu.jp/article/12946">富山の初心者おすすめ6座</a>
+  </div>
+  <div class="card hidden" data-k="hidden">
+    <h4>薬師岳（2,926m）<span class="tag h">穴場・北アの貴婦人</span></h4>
+    <div class="spec">折立登山口から／1泊2日でギリギリ／日本百名山</div>
+    <p>「北アルプスの貴婦人」。北アで最も長い稜線をもつ大らかな山で、百名山なのに立山ほど混まない。太郎平小屋・薬師岳山荘泊。ただし折立までのアプローチ（有峰林道）＋歩行時間で今回の日程はかなりタイト。</p>
+    <a href="https://www.toyamashi-kankoukyoukai.jp/model-course/yakushidake-mountaineering-model-course/">富山市観光協会モデルコース</a>
+    <a href="https://www.yakushidake-sansou.com/">薬師岳山荘</a>
+    <a href="https://yamap.com/mountains/52">YAMAP 薬師岳</a>
+  </div>
+  <div class="card hidden" data-k="hidden">
+    <h4>立山カルデラ砂防体験学習会<span class="tag h">超穴場・要予約</span></h4>
+    <div class="spec">通常は立入不能なエリアへ／7〜10月</div>
+    <p>専門解説員同行で、国重要文化財の<b>白岩砂防堰堤</b>、<b>立山温泉跡地</b>、六九谷展望台、跡津川断層露頭を見学。トロッコに乗れる回もある。「登山」ではないが、立山の裏の顔を見る体験としては唯一無二。<b>抽選・事前申込制</b>なので8/22–23の枠は早めに確認。</p>
+    <a href="https://www.tatecal.or.jp/tatecal/hakubutu/haku-50.html">立山カルデラ砂防博物館</a>
+    <a href="https://toyama.visit-town.com/visittour/karudera-taiken">体験ツアー詳細</a>
+    <a href="https://www.mlit.go.jp/sogoseisaku/region/infratourism/infralist/toyama/index01.html">国交省インフラツーリズム</a>
+  </div>
+</div>
+
+<!-- ============ 3 ============ -->
+<h2 id="s3"><span class="num">03</span>温泉（マスト項目）</h2>
+
+<h3>A. 山の上の温泉 — ここが立山の真骨頂</h3>
+<div class="grid">
+  <div class="card royal" data-k="royal">
+    <h4>みくりが池温泉<span class="tag r">王道・日本最高所</span></h4>
+    <div class="spec">標高2,410m／日本一高所の天然温泉／日本秘湯を守る会</div>
+    <p>地獄谷の白濁硫黄泉。王道でありながら「日本秘湯を守る会」会員という二面性。宿泊もでき、1泊2食13,500円〜（税込・入湯税150円込）で予算内。日帰り入浴も可。</p>
+    <a href="https://www.mikuri.com/">公式サイト</a>
+    <a href="https://www.hitou.or.jp/provider/detail?providerId=725">日本秘湯を守る会</a>
+    <a href="https://www.jalan.net/yad311084/">じゃらん</a>
+  </div>
+  <div class="card royal" data-k="royal">
+    <h4>らいちょう温泉 雷鳥荘<span class="tag r">王道・展望風呂</span></h4>
+    <div class="spec">標高2,370m／日帰り入浴800円・11:00〜20:00／室堂から徒歩30分</div>
+    <p>豊富な湯量の掛け流し。内湯＋展望風呂の2つで、雷鳥沢と地獄谷を見下ろす高台に立つ。1泊2食10,850〜15,150円と幅があり、安いプランなら余裕で予算内。</p>
+    <a href="https://www.raichoso.com/">公式サイト</a>
+    <a href="https://onsen.nifty.com/tateyamakurobearupenrutoshuuhen-onsen/onsen001831/">ニフティ温泉</a>
+  </div>
+  <div class="card royal" data-k="royal">
+    <h4>雷鳥沢ヒュッテ<span class="tag r">王道・下山即温泉</span></h4>
+    <div class="spec">室堂から徒歩40分／営業4/15〜10/12／温泉あり</div>
+    <p>立山三山を下ってきた足で、そのまま湯に入れる位置。<b>4名個室13,000円/人（2食付）</b>という価格設定は今回の4人パーティにドンピシャ。相部屋12,000円・素泊8,000円。</p>
+    <a href="https://www.raichozawa.net/">公式サイト</a>
+    <a href="https://www.funq.jp/peaks/article/576076/">PEAKS 山小屋大全</a>
+  </div>
+  <div class="card hidden" data-k="hidden">
+    <h4>立山室堂山荘<span class="tag h">やや穴場・日本最古の山小屋隣</span></h4>
+    <div class="spec">標高2,450m／日帰り入浴700円／1泊2食10,450円〜</div>
+    <p>室堂ターミナルから至近で、隣に国重要文化財「立山室堂」（現存最古の山小屋）が建つ。個室・自炊室・乾燥室あり。雄山を望む風呂と星空。価格は山小屋最安帯。</p>
+    <a href="https://www.yamareco.com/modules/yamainfo/ptinfo.php?ptid=1432">ヤマレコ 施設情報</a>
+    <a href="https://www.jtb.co.jp/kokunai-hotel/htl/5313301/plan/">JTBプラン</a>
+  </div>
+</div>
+
+<h3>B. 麓・車で行ける温泉</h3>
+<div class="grid">
+  <div class="card royal" data-k="royal">
+    <h4>立山山麓温泉「千寿の湯」／グリーンビュー立山<span class="tag r">王道・立山駅至近</span></h4>
+    <div class="spec">立山駅徒歩3分／ナトリウム炭酸水素塩泉＝美人の湯</div>
+    <p>下山してケーブルを降りて3分で温泉。この立地は強い。宿泊は1泊2食14,200円〜で予算内ギリギリ。</p>
+    <a href="https://www.greenview-t.com/">公式サイト</a>
+    <a href="https://www.asoview.com/note/6001/">立山の日帰り温泉6選</a>
+  </div>
+  <div class="card royal" data-k="royal">
+    <h4>立山吉峰温泉 ゆ〜ランド<span class="tag r">王道・日帰り向き</span></h4>
+    <div class="spec">10:00〜21:00（最終受付20:30）／露天含む4種の湯</div>
+    <p>グリーンパーク吉峰内。天然石の露天、サウナ、ハーブ湯。立山駅と富山市街の中間で、帰路に寄りやすい。モンベルフレンドショップ。</p>
+    <a href="https://www.yoshimine.or.jp/?page_id=37">公式</a>
+    <a href="https://www.jalan.net/kankou/spt_16323cc3360048156/">じゃらん</a>
+  </div>
+  <div class="card royal" data-k="royal">
+    <h4>あわすの温泉／ホテル森の風立山<span class="tag r">王道・美肌の湯</span></h4>
+    <div class="spec">アルカリ性単純硫黄泉／日帰り入浴可</div>
+    <p>「美肌の湯」。広い大浴場に内湯・ジャグジー・サウナ。アルペンルート玄関口の大型ホテルなので設備は快適。</p>
+    <a href="https://www.morinokaze-tateyama.com/">公式サイト</a>
+    <a href="https://www.asoview.com/note/6001/">日帰り温泉まとめ</a>
+  </div>
+  <div class="card hidden" data-k="hidden">
+    <h4>神代温泉（氷見）<span class="tag h">穴場・素朴な秘湯</span></h4>
+    <div class="spec">源泉かけ流し45.4℃／ナトリウム-塩化物強塩泉</div>
+    <p>氷見の山間にある、湯治場の雰囲気を残した一軒宿の日帰り湯。茶褐色の強塩泉。「知る人ぞ知る」という条件に最も忠実な候補のひとつ。氷見グルメと組める。</p>
+    <a href="https://www.experienceeastjapan.jp/serial/0214.html">氷見の日帰り温泉5選</a>
+    <a href="https://toyama-asbb.com/archives/54182">富山の温泉地まとめ</a>
+  </div>
+  <div class="card hidden" data-k="hidden">
+    <h4>小川温泉元湯 ホテルおがわ<span class="tag h">穴場・天然洞窟野天風呂</span></h4>
+    <div class="spec">1泊13,200円〜／朝日町・山あいの一軒宿</div>
+    <p>川沿いに湧く<b>天然洞窟の野天風呂</b>が名物。予算内に収まる秘湯系の宿としては有力。立山からは東へ離れるので、帰路を糸魚川方面に振る場合に合う。</p>
+    <a href="https://www.jtb.co.jp/kokunai-hotel/list/1634303/">JTB 小川温泉元湯</a>
+    <a href="https://www.info-toyama.com/stories/onsen">富山の温泉宿・名湯から秘湯まで</a>
+  </div>
+  <div class="card hidden" data-k="hidden">
+    <h4>金太郎温泉 カルナの館<span class="tag h">穴場・営業時間の鬼</span></h4>
+    <div class="spec">年中無休 8:30〜23:30（魚津市）</div>
+    <p>下山が遅れても、夜遅くまで確実に入れる保険。含硫黄・ナトリウム-カルシウム塩化物泉で、湯量と迫力ある岩風呂で知られる。</p>
+    <a href="https://www.kintarouonsen.co.jp/karuna/">公式サイト</a>
+  </div>
+  <div class="card hidden" data-k="hidden">
+    <h4>大牧温泉<span class="tag h">超穴場・船でしか行けない</span></h4>
+    <div class="spec">小牧ダムから遊覧船30分／宿泊は2名5.5万円〜</div>
+    <p>庄川峡の断崖に立つ一軒宿。宿泊は予算を大幅に超えるが、<b>遊覧船の日帰り往復＋入浴</b>なら現実的。五箇山と同じ南砺エリアなので、往路に東海北陸道を使うなら組み込める。</p>
+    <a href="https://www.oomaki.jp/">公式サイト</a>
+    <a href="https://www.jalan.net/yad353855/">じゃらん</a>
+  </div>
+  <div class="card hidden" data-k="hidden">
+    <h4>【参考】欅平の秘湯群 — 今回は不可<span class="tag h">2026年10月以降</span></h4>
+    <div class="spec">祖母谷温泉／名剣温泉／黒薙温泉</div>
+    <p>祖母谷温泉は欅平から徒歩50分の「秘湯中の秘湯」で河原に<b>マイ露天風呂を掘れる</b>。名剣温泉は徒歩15分、ランプの灯りの露天。いずれも8月は黒部峡谷鉄道が猫又折り返しのため到達不可。<b>10月1日以降の再訪リストへ。</b></p>
+    <a href="https://meiken-onsen.com/meiken/">名剣温泉</a>
+    <a href="https://rurubu.jp/andmore/spot/70001688">祖母谷温泉</a>
+    <a href="https://www.kurotetu.co.jp/spot_keyakidaira/">黒部峡谷鉄道・欅平</a>
+  </div>
+</div>
+
+<!-- ============ 4 ============ -->
+<h2 id="s4"><span class="num">04</span>宿の候補（4名・1.5万円以下）</h2>
+<p class="lead">結論として <b>「山の上に泊まる」なら予算1.5万円は十分成立します</b>。山小屋は1泊2食で1〜1.5万円が標準相場だからです。逆に麓の温泉旅館は1.5万円が上限ギリギリ、素泊まりなら余裕という構図。</p>
+
+<table>
+<tr><th>宿</th><th>エリア/標高</th><th>1泊2食（大人1名）</th><th>ポイント</th></tr>
+<tr><td><strong>雷鳥沢ヒュッテ</strong></td><td>雷鳥沢 2,350m</td><td><strong>4名個室 13,000円</strong>／相部屋12,000円／素泊8,000円</td><td>温泉あり。4人個室の価格設定が今回に最適。営業4/15–10/12</td></tr>
+<tr><td><strong>立山室堂山荘</strong></td><td>室堂 2,450m</td><td><strong>10,450円〜</strong></td><td>最安帯。室堂ターミナル至近、個室・乾燥室あり</td></tr>
+<tr><td><strong>らいちょう温泉 雷鳥荘</strong></td><td>室堂 2,370m</td><td>10,850〜15,150円</td><td>展望風呂。プラン次第で予算内</td></tr>
+<tr><td><strong>五色ヶ原山荘</strong></td><td>五色ヶ原</td><td>約11,000円</td><td>縦走前提。混雑と無縁</td></tr>
+<tr><td><strong>大日小屋</strong></td><td>大日岳 2,425m</td><td>13,000〜15,000円／素泊8,500〜10,500円</td><td>ランプの宿。営業7月上旬〜9月末</td></tr>
+<tr><td><strong>みくりが池温泉</strong></td><td>室堂 2,410m</td><td>13,500円〜（2名30,700円〜）</td><td>日本最高所の天然温泉。人気なので早期予約</td></tr>
+<tr><td><strong>一ノ越山荘</strong></td><td>一ノ越 2,700m</td><td>要確認</td><td>雄山直下。三山縦走の定番泊地</td></tr>
+<tr><td><strong>天狗平山荘</strong></td><td>天狗平 2,300m</td><td>要確認</td><td>和洋16室（2〜5名）。奥大日岳への起点</td></tr>
+<tr><td><strong>雷鳥沢キャンプ場</strong></td><td>雷鳥沢</td><td><strong>1人1泊500円</strong>（2泊以上1,000円）</td><td>水洗トイレ・水場2ヶ所。温泉は雷鳥荘等で</td></tr>
+<tr><td><strong>千寿荘</strong></td><td>立山駅（麓）</td><td>要確認・全11室</td><td><b>ケーブルカー乗場から徒歩30秒</b>。始発狙いなら最強立地</td></tr>
+<tr><td><strong>グリーンビュー立山</strong></td><td>立山駅徒歩3分</td><td>14,200円〜</td><td>立山山麓温泉「千寿の湯」付き</td></tr>
+<tr><td><strong>国民宿舎 天望立山荘</strong></td><td>弥陀ヶ原 1,930m</td><td>要確認（国民宿舎＝低廉）</td><td>八郎坂・弥陀ヶ原トレッキング＋スターウォッチング企画あり</td></tr>
+<tr><td><strong>弥陀ヶ原ホテル</strong></td><td>弥陀ヶ原 1,930m</td><td>要確認（やや上位）</td><td>雲海に沈む夕日・星空・富山平野の夜景</td></tr>
+</table>
+
+<div class="grid">
+  <div class="card hidden" data-k="hidden">
+    <h4>千寿荘<span class="tag h">穴場・立地の暴力</span></h4>
+    <p>立山ケーブルカー乗場・きっぷ売場に一番近い宿。徒歩30秒。8/22の早朝混雑を「宿から歩いて数十秒で並ぶ」に変えられる。全11室と小さいので早期予約必須。</p>
+    <a href="https://www.senjusou.jp/">公式サイト</a>
+  </div>
+  <div class="card hidden" data-k="hidden">
+    <h4>国民宿舎 天望立山荘<span class="tag h">穴場・弥陀ヶ原泊</span></h4>
+    <p>弥陀ヶ原に泊まるという選択。室堂より静かで、星空観察や称名滝八郎坂トレッキングの企画も用意されている。国民宿舎なので価格も抑えめ。</p>
+    <a href="https://www.tateyama-so.jp/">公式サイト</a>
+    <a href="https://www.tateyama-so.jp/event/183/">トレッキング＆スターウォッチング</a>
+  </div>
+  <div class="card royal" data-k="royal">
+    <h4>宿の横断検索<span class="tag r">実務</span></h4>
+    <p>4人1室の実売価格は日付で大きく動くので、8/22(土)で横断検索するのが早い。</p>
+    <a href="https://www.jalan.net/180000/STA_011134/">じゃらん 立山駅周辺</a>
+    <a href="https://www.jtb.co.jp/kokunai-hotel/list/1603/">JTB アルペンルート</a>
+    <a href="https://www.alpen-route.com/information/link_hotel.html">公式・関連宿泊施設</a>
+    <a href="https://www.momonayama.net/hundred_mt_individually_data/accommodations_data/accommodations_data-058.html">立山 宿泊施設データ一覧</a>
+  </div>
+</div>
+
+<!-- ============ 5 ============ -->
+<h2 id="s5"><span class="num">05</span>ご当地グルメ</h2>
+
+<h3>A. 王道 — 富山で外さない布陣</h3>
+<div class="grid">
+  <div class="card royal" data-k="royal">
+    <h4>富山ブラック<span class="tag r">王道</span></h4>
+    <div class="spec">元祖＝西町大喜／全国区＝麺家いろは</div>
+    <p>戦後復興の肉体労働者の塩分補給として生まれた、真っ黒で塩っ気の強い醤油ラーメン。<b>西町大喜</b>が発祥（一時閉店後、新メンバーが暖簾を継いで再スタート）。<b>麺家いろは</b>は東京ラーメンショー売上1位を5度獲った実力店で、富山駅南口地下道直結のCiC店が便利。</p>
+    <a href="https://www.nisicho-taiki.com/">西町大喜 公式</a>
+    <a href="https://www.menya-iroha.com/">麺家いろは 公式</a>
+    <a href="https://www.toyamashi-kankoukyoukai.jp/feature/feature-toyama-black-ramen-10/">富山市公式・ブラック10選</a>
+  </div>
+  <div class="card royal" data-k="royal">
+    <h4>白えび<span class="tag r">王道・富山湾の宝石</span></h4>
+    <div class="spec">旬は春〜夏＝8月はまだ狙える</div>
+    <p>富山湾の海底谷だけに商業的に成立する漁がある固有の存在。刺身・かき揚げ・寿司。<b>新湊きっときと市場</b>の「きっときと亭」の白えびづくし御膳、「潮の家」の白えび塩ラーメン・白えびコロッケなど攻め方が多い。</p>
+    <a href="https://www.info-toyama.com/stories/shiroebi">白えび完全ガイド</a>
+    <a href="https://www.info-toyama.com/attractions/80032">新湊きっときと市場</a>
+    <a href="https://www.andtrip.jp/article/005628.html">市場レポート</a>
+  </div>
+  <div class="card royal" data-k="royal">
+    <h4>富山湾鮨／回転寿司<span class="tag r">王道・コスパ最強</span></h4>
+    <div class="spec">すし食いねぇ！ランチ8貫＋あら汁 680円〜</div>
+    <p>富山の回転寿司は「回転寿司の顔をした寿司屋」。<b>すし食いねぇ！</b>（富山湾＋金沢港直送、能登産コシヒカリ）、<b>廻る富山湾 すし玉</b>（創業30年超、昼夜2回仕入れ）、<b>氷見きときと寿し</b>（ぶりとろ・のどぐろ）。富山駅直結「とやマルシェ」の店も地元評価が高い。</p>
+    <a href="https://www.info-toyama.com/stories/toyama_kaitenzushi">公式・回転寿司8選（穴場含む）</a>
+    <a href="https://www.info-toyama.com/stories/toyamawan-sushi">富山湾鮨とは</a>
+    <a href="https://www.info-toyama.com/articles/photoyama-sushi">地元民おすすめ寿司</a>
+  </div>
+  <div class="card royal" data-k="royal">
+    <h4>ますのすし<span class="tag r">王道・車移動に最適</span></h4>
+    <div class="spec">駅弁の王／笹の香り／店ごとに味が違う</div>
+    <p>4人で車移動なら、往路のサービスエリアや富山駅で買って現地で食べる／土産にする、が定番。作り手ごとに酢の締めと厚みが違うので<b>食べ比べ</b>が成立する。</p>
+    <a href="https://furunavi.jp/discovery/knowledge_food/202407-toyama/">富山の名物14選</a>
+    <a href="https://www.info-toyama.com/stories/toyama-gourmet">富山グルメ総集編</a>
+  </div>
+  <div class="card royal" data-k="royal">
+    <h4>氷見うどん・昆布締め・富山おでん<span class="tag r">王道・郷土食</span></h4>
+    <div class="spec">日本三大うどんの一角／とろろ昆布トッピング</div>
+    <p><b>氷見うどん</b>は270年以上の歴史をもつ手延べで、腰の強さと喉ごし。<b>昆布締め</b>は刺身を昆布で挟む富山の保存食由来の郷土料理。<b>富山おでん</b>は富山産の具（かまぼこ・白えびつみれ等）＋<b>とろろ昆布をのせる</b>のが定義。昆布消費量日本一の県らしい食文化。</p>
+    <a href="https://www.tenpos.com/foodmedia/newstrend/5163/">富山おでんの秘密</a>
+    <a href="https://tabihow.jp/trip116/">富山ご当地グルメ41種</a>
+    <a href="https://www.info-toyama.com/articles/arunon-toyama_gourmet">ご当地グルメ11選</a>
+  </div>
+</div>
+
+<h3>B. 穴場 — 立山町・射水の地元寄り</h3>
+<div class="grid">
+  <div class="card hidden" data-k="hidden">
+    <h4>鮨処 板はし（立山町）<span class="tag h">穴場・町の名店</span></h4>
+    <div class="spec">町内産の米＋魚津産魚介／リーズナブルなランチ</div>
+    <p>富山市街まで下りずに、立山町内で富山湾鮨が食べられる。ランチが手頃で、下山後の遅い昼に使いやすい。</p>
+    <a href="https://www.info-toyama.com/articles/shiho-tateyamagourmet">立山町グルメ3選</a>
+  </div>
+  <div class="card hidden" data-k="hidden">
+    <h4>お食事＆喫茶あおき（立山駅前）<span class="tag h">穴場・ネタ枠</span></h4>
+    <div class="spec">立山カルデラ砂防博物館コラボ「室堂平と玉殿溶岩カレー」</div>
+    <p>立山駅ロータリー正面。ケーブル待ちや下山直後の食事処として実用的で、コラボメニューという話のネタも付いてくる。</p>
+    <a href="https://www.info-toyama.com/articles/shiho-tateyamagourmet">立山町グルメ3選</a>
+  </div>
+  <div class="card hidden" data-k="hidden">
+    <h4>The Table / Healthian-wood（立山町）<span class="tag h">穴場・ガストロノミー</span></h4>
+    <div class="spec">熊野泰博シェフ／地元食材</div>
+    <p>ハーブ農園併設の施設内レストラン。「山で汗をかいた後にちょっといいものを食べる」枠。事前予約推奨。</p>
+    <a href="https://www.info-toyama.com/articles/shiho-tateyamagourmet">立山町グルメ3選</a>
+  </div>
+  <div class="card hidden" data-k="hidden">
+    <h4>むか井（上市・立山エリア）<span class="tag h">穴場・手打ち蕎麦</span></h4>
+    <div class="spec">田舎蕎麦／天むし</div>
+    <p>登山の朝や帰路に。蕎麦好きがいるなら押さえておきたい一軒。</p>
+    <a href="https://retty.me/area/PRE16/ARE310/SUB31002/PUR1/">上市・立山のランチ20選</a>
+    <a href="https://tabelog.com/toyama/C16323/rstLst/soba/">食べログ 立山町の蕎麦</a>
+  </div>
+  <div class="card hidden" data-k="hidden">
+    <h4>カトウ焼きそば／立山放牧牛<span class="tag h">穴場・B級と地産</span></h4>
+    <div class="spec">焼きそば専門店／立山放牧牛のローストビーフ・ハンバーグ</div>
+    <p>立山町の日常食側。パンダ焼き・お好み焼きも人気。立山放牧牛のランチは小鉢・サラダ・スープ付きで満足度が高い。</p>
+    <a href="https://www.info-toyama.com/articles/shiho-tateyamagourmet">立山町グルメ3選</a>
+    <a href="https://retty.me/area/PRE16/ARE310/SUB31002/LND33497/PUR1/">立山町のランチ12選</a>
+  </div>
+  <div class="card hidden" data-k="hidden">
+    <h4>新湊 内川＋昼セリ<span class="tag h">穴場・日本のベニス</span></h4>
+    <div class="spec">全国的に珍しい「昼セリ」が見られる漁港</div>
+    <p>川沿いに漁船が係留された景観で「日本のベニス」と呼ばれる。きっときと市場で白えびを食べたあとの散策とセットで。帰路が高岡・氷見方面になる場合の目玉。</p>
+    <a href="https://magazine.hitosara.com/article/3938/">昼セリと内川散策</a>
+    <a href="https://www.takaoka.or.jp/viewpoint/detail_3386.html">高岡観光ナビ</a>
+  </div>
+</div>
+
+<!-- ============ 6 ============ -->
+<h2 id="s6"><span class="num">06</span>壮大な自然・絶景・観光</h2>
+
+<h3>A. 王道</h3>
+<div class="grid">
+  <div class="card royal" data-k="royal">
+    <h4>称名滝<span class="tag r">王道・落差日本一</span></h4>
+    <div class="spec">落差350m／駐車場〜展望台 往復1時間30分／立山ICから約31km</div>
+    <p>日本一の落差をもつ滝。<b>大日三山を下山してくる出口</b>でもあるので、縦走プランと構造的に相性がいい。立山駅から探勝バス約20分（1時間に1便）。マイカーでも行ける。</p>
+    <a href="https://www.yamakei-online.com/trailhead/detail.php?id=1111">称名滝 基本情報</a>
+    <a href="https://tozanguchinavi.com/trailhead/trailhead-10223">駐車場情報</a>
+    <a href="https://www.alpen-route.com/access_new/fare/person/doc/2024%E9%81%8B%E8%B3%83%E8%A1%A8(%E7%A7%B0%E5%90%8D%E6%BB%9D%E6%8E%A2%E5%8B%9D%E7%B7%9A).pdf">探勝バス運賃表</a>
+  </div>
+  <div class="card royal" data-k="royal">
+    <h4>黒部ダム<span class="tag r">王道・観光放水中</span></h4>
+    <div class="spec">放水期間6/26〜10/15／毎秒10〜15トン／立山駅⇄黒部湖 往復16,480円</div>
+    <p>「世紀の大事業」。レインボーテラスから間近に放水を見られる。ただし<b>立山駅からの往復で6〜7時間＋運賃1.6万円</b>を要するため、登山と同日には入らない。「登山を捨てて観光に振る」場合の選択肢。</p>
+    <a href="https://www.info-toyama.com/stories/kurobe_gaido">黒部ダム完全ガイド</a>
+    <a href="https://www.kurobe-dam.com/">黒部ダム公式</a>
+  </div>
+  <div class="card royal" data-k="royal">
+    <h4>五箇山 相倉・菅沼 合掌造り集落<span class="tag r">王道・世界遺産</span></h4>
+    <div class="spec">相倉＝現存20棟／菅沼＝9戸／東海北陸道 五箇山ICから約20分</div>
+    <p>1995年に白川郷とともに世界遺産登録。<b>菅沼のほうが小規模で静か</b>なので、混雑を避けたいなら菅沼優先。往路に東海北陸道を選べば大津京〜立山の途中で寄れる位置関係。</p>
+    <a href="https://gokayama-info.jp/archives/1718">相倉合掌造り集落</a>
+    <a href="https://suganuma.info/">菅沼合掌造り集落</a>
+    <a href="https://toyama.visit-town.com/toyamastyle/gokayama-access">アクセス解説</a>
+  </div>
+  <div class="card royal" data-k="royal">
+    <h4>雨晴海岸<span class="tag r">王道・海越しの3,000m</span></h4>
+    <div class="spec">日本の渚100選／富山湾越しに立山連峰</div>
+    <p>海の向こうに3,000m級の稜線が並ぶ、世界的にも珍しい景観。ただし<b>夏は空気が霞んで見えにくい</b>のが正直なところ。早朝の条件が良い日を引ければ大当たり。</p>
+    <a href="https://www.info-toyama.com/articles/umakichi-tateyama">立山連峰が一望できるスポット</a>
+    <a href="https://www.info-toyama.com/stories/himi-kanko">氷見周辺観光10選</a>
+  </div>
+</div>
+
+<h3>B. 穴場</h3>
+<div class="grid">
+  <div class="card hidden" data-k="hidden">
+    <h4>立山カルデラ砂防博物館<span class="tag h">穴場・立山駅すぐ</span></h4>
+    <div class="spec">立山駅から徒歩すぐ／県立総合博物館（1998年開館）</div>
+    <p>立山カルデラの自然史と、100年以上続く砂防事業を扱う。<b>ケーブル待ちの時間を潰す最良の手</b>であり、「大人の社会科見学」として満足度が高い。ここを見てから山に上がると景色の意味が変わる。</p>
+    <a href="https://www.tatecal.or.jp/tatecal/hakubutu/haku-50.html">公式サイト</a>
+    <a href="https://www.info-toyama.com/articles/nakatani-tatecal">プチ・アルペンルートツアー</a>
+  </div>
+  <div class="card hidden" data-k="hidden">
+    <h4>白岩砂防堰堤<span class="tag h">穴場・国重要文化財</span></h4>
+    <div class="spec">見学期間7〜10月／解説員が案内／日本の20世紀遺産20選</div>
+    <p>落差108mという日本最大級の砂防堰堤。通常は立入困難で、<b>体験学習会に当選した人だけが見られる</b>。立山カルデラ、立山温泉跡地、跡津川断層露頭とセット。</p>
+    <a href="https://www.mlit.go.jp/sogoseisaku/region/infratourism/infralist/toyama/index01.html">国交省インフラツーリズム</a>
+    <a href="https://toyama.visit-town.com/toyamastyle/post-26401">体験ツアーレポート</a>
+  </div>
+  <div class="card hidden" data-k="hidden">
+    <h4>医王山 国見平<span class="tag h">穴場・夜景/朝景</span></h4>
+    <div class="spec">標高約690m</div>
+    <p>「知る人ぞ知る」と紹介される夜景・朝景スポット。水を張った田に空が映る時期の光景は水上都市のようだと評される。</p>
+    <a href="https://www.nap-camp.com/mag/13702">富山の絶景10選</a>
+  </div>
+  <div class="card hidden" data-k="hidden">
+    <h4>城山公園しらとり広場<span class="tag h">穴場・静かな夜景</span></h4>
+    <div class="spec">展望台から立山連峰＋富山市内の灯り</div>
+    <p>混雑せず夜景を楽しみたい人向け。宿が麓／市街なら、夕食後のひと足に。</p>
+    <a href="https://www.jalan.net/rentacar/drive/180000/8512/">富山の絶景ドライブ16選</a>
+  </div>
+  <div class="card hidden" data-k="hidden">
+    <h4>有峰湖・有峰森林文化村<span class="tag h">穴場・林道の奥</span></h4>
+    <div class="spec">薬師岳（折立）登山口へ向かう有峰林道沿い</div>
+    <p>有峰ダムのダム湖と深いブナ・ミズナラの森。人が少ない。薬師岳を狙う場合は必ず通る道で、山に登らなくてもドライブ目的地として成立する。<b>林道の通行時間規制</b>があるので事前確認を。</p>
+    <a href="https://www.toyamashi-kankoukyoukai.jp/model-course/yakushidake-mountaineering-model-course/">富山市観光協会（折立・有峰林道）</a>
+  </div>
+  <div class="card hidden" data-k="hidden">
+    <h4>夏の富山ひんやりスポット<span class="tag h">穴場ソース</span></h4>
+    <div class="spec">滝・渓谷・避暑地の県公式まとめ（2026）</div>
+    <p>8月に富山で「涼しい場所」を探すための一次情報源。称名滝以外の滝や渓谷の候補が拾える。</p>
+    <a href="https://www.info-toyama.com/stories/toyama_coolspot">県公式ひんやりスポット特集</a>
+    <a href="https://www.info-toyama.com/stories/summer-toyama">夏のイベント・お祭り完全紹介</a>
+  </div>
+</div>
+
+<h3>C. 8月22〜23日に当たるイベント</h3>
+<div class="grid">
+  <div class="card royal" data-k="royal">
+    <h4>猿倉山森林公園 花火大会<span class="tag r">8/22(土) 19:20〜</span></h4>
+    <p>神通川と富山平野を一望する会場。山々に音が反響する。<b>初日の夜に麓／富山市街泊にする場合の目玉</b>になり得る（＝室堂泊にすると当然行けない）。開催情報は要再確認。</p>
+    <a href="https://www.info-toyama.com/stories/fireworks-toyama">県公式 花火大会まとめ2026</a>
+    <a href="https://hanabi.walkerplus.com/calendar/08/ar0516/">ウォーカープラス 8月富山</a>
+  </div>
+  <div class="card hidden" data-k="hidden">
+    <h4>ワールドミュージック祭典<span class="tag h">8/21(金)〜23(日)</span></h4>
+    <p>異文化交流とワールドミュージックの祭典。アーティストのワークショップあり。時間が余った枠の埋め方として。</p>
+    <a href="https://www.info-toyama.com/stories/summer-toyama">夏の富山イベント一覧</a>
+  </div>
+</div>
+
+<!-- ============ 7 ============ -->
+<h2 id="s7"><span class="num">07</span>動画（YouTube）で下見する</h2>
+<p class="lead">文字だけでは分からない「一ノ越から上の岩の感じ」「ケーブルカーの行列の長さ」「稜線の高度感」は動画が圧倒的に早いです。</p>
+<div class="grid">
+  <div class="card royal yt" data-k="royal">
+    <h4>立山を徹底解説（アルペンルート＋登山）<span class="tag r">まず1本</span></h4>
+    <p>アルペンルートの仕組みと立山登山の全体像を通しで解説。4人で共有して認識を揃えるのに向く。</p>
+    <a href="https://www.youtube.com/watch?v=XjW4KPQPp1E">動画を見る</a>
+  </div>
+  <div class="card royal yt" data-k="royal">
+    <h4>室堂平から立山三山を歩く<span class="tag r">王道ルート下見</span></h4>
+    <p>室堂平→立山三山、みくりが池、黒部ダムまで含む見どころ網羅型。</p>
+    <a href="https://www.youtube.com/watch?v=CZz1n1EEJ24">動画を見る</a>
+  </div>
+  <div class="card royal yt" data-k="royal">
+    <h4>初夏の雄山へ 室堂山荘から往復<span class="tag r">雄山だけ見たい人へ</span></h4>
+    <p>2025年8月公開。雄山往復のみの実際のペース感が分かる。</p>
+    <a href="https://www.youtube.com/watch?v=dBM6A47sov4">動画を見る</a>
+  </div>
+  <div class="card royal yt" data-k="royal">
+    <h4>早朝から長蛇の列！立山駅〜室堂編<span class="tag r">混雑のリアル</span></h4>
+    <p>ケーブルカーとバスの待ち行列の実際。WEBきっぷを買う動機付けになる。</p>
+    <a href="https://www.youtube.com/shorts/RufZmPq1QWQ">動画を見る</a>
+  </div>
+  <div class="card hidden yt" data-k="hidden">
+    <h4>想像以上にキツい！？真夏の立山縦走と奥大日岳<span class="tag h">穴場ルートの現実</span></h4>
+    <p>2025年8月公開。立山三山＋奥大日岳を真夏に歩く2〜3日の記録。<b>今回の日程に最も近い季節条件</b>で、しんどさが正直に写っている点が有用。</p>
+    <a href="https://www.youtube.com/watch?v=E9X6vMu5vb4">動画を見る</a>
+  </div>
+  <div class="card hidden yt" data-k="hidden">
+    <h4>称名滝〜大日岳〜奥大日岳〜室堂 縦走<span class="tag h">大日三山の下見</span></h4>
+    <p>大日三山縦走をそのまま辿る記録。大日小屋泊プランを検討するなら必見。</p>
+    <a href="https://www.youtube.com/watch?v=aqeW5jCRhCY">動画を見る</a>
+  </div>
+  <div class="card hidden yt" data-k="hidden">
+    <h4>室堂から五色ヶ原へ 高山植物と展望に恵まれた縦走記<span class="tag h">五色ヶ原の下見</span></h4>
+    <p>浄土山〜獅子岳〜ザラ峠〜五色ヶ原。危険箇所の様子を確認できる。</p>
+    <a href="https://www.youtube.com/watch?v=HEDpClMlDSo">動画を見る</a>
+  </div>
+  <div class="card hidden yt" data-k="hidden">
+    <h4>夏の立山 室堂平から奥大日岳【4K】<span class="tag h">映像美</span></h4>
+    <p>4K映像で稜線の雰囲気を掴む。ナレーションより風景重視。</p>
+    <a href="https://www.youtube.com/watch?v=t8FcOUNnFg0">動画を見る</a>
+  </div>
+  <div class="card hidden yt" data-k="hidden">
+    <h4>雷鳥沢キャンプ場でテント泊 ソロ登山<span class="tag h">雷鳥沢の様子</span></h4>
+    <p>雷鳥沢泊の実際。キャンプ場を検討する場合の判断材料。</p>
+    <a href="https://www.youtube.com/watch?v=z0Sq38EfhaE">動画を見る</a>
+  </div>
+  <div class="card royal yt" data-k="royal">
+    <h4>富山テレビ 立山室堂お天気カメラ ライブ<span class="tag r">出発直前に</span></h4>
+    <p>24時間ライブ配信。前日夜・当日早朝の判断材料として。</p>
+    <a href="https://www.youtube.com/watch?v=IAdFjoGEoII">ライブを見る</a>
+  </div>
+</div>
+
+<!-- ============ 8 ============ -->
+<h2 id="s8"><span class="num">08</span>組み合わせ案（叩き台）</h2>
+<p class="lead">採用はKeIさんが決める前提で、上の候補をどう繋ぐと成立するかだけ示します。<b>最大の分岐は「山の上に泊まるか、麓に泊まるか」</b>です。</p>
+
+<div class="plan">
+  <h4>案① 王道・室堂泊 ─ 3,000mと最高所温泉を両取り</h4>
+  <ol>
+    <li><span class="t">1日目 4:00</span> 大津京発 → 北陸道 → 立山駅（約4.5時間、休憩込み5時間）</li>
+    <li><span class="t">9:30</span> WEBきっぷで指定便に乗車 → 室堂 11:00頃着（往復8,180円）</li>
+    <li><span class="t">午後</span> 室堂平周遊（みくりが池・地獄谷展望・雷鳥探し）→ 雷鳥沢ヒュッテ or みくりが池温泉へ</li>
+    <li><span class="t">夕</span> 日本最高所の温泉 → 標高2,400mの星空</li>
+    <li><span class="t">2日目 5:00</span> 出発。一ノ越→雄山→大汝山→富士ノ折立→雷鳥沢の周回（約6時間）</li>
+    <li><span class="t">13:00</span> 下山後もう一度温泉 → バス・ケーブルで立山駅</li>
+    <li><span class="t">16:00</span> 立山町 or 富山市街で富山ブラック／回転寿司 → 帰路</li>
+  </ol>
+</div>
+
+<div class="plan">
+  <h4>案② 穴場・大日小屋泊 ─ 剱岳の特等席とランプの宿</h4>
+  <ol>
+    <li><span class="t">1日目 早朝</span> 大津京発 → 立山駅 → 室堂（午前中に入りたい）</li>
+    <li><span class="t">昼</span> 室堂 → 新室堂乗越 → 奥大日岳 → 大日小屋（約8時間・行動時間長め）</li>
+    <li><span class="t">夜</span> ランプの灯りとギターの音。正面に剱岳</li>
+    <li><span class="t">2日目 6:00</span> 大日岳 → 大日平（木道）→ 大日坂を下って称名滝（約4時間）</li>
+    <li><span class="t">昼</span> 称名滝を見て立山駅へ → 千寿の湯 or 吉峰温泉で汗を流す</li>
+    <li><span class="t">午後</span> 立山町の鮨処板はし or 富山市街 → 帰路</li>
+  </ol>
+  <p style="font-size:.82rem;color:var(--tx3);margin-top:8px">※1日目の行動時間が長いので、室堂入りが遅れると成立しない。前夜に千寿荘泊にして始発を取る「前泊化」が保険になる。</p>
+</div>
+
+<div class="plan">
+  <h4>案③ 混雑完全回避・立山に登らない案 ─ 弥陀ヶ原＋秘湯＋世界遺産</h4>
+  <ol>
+    <li><span class="t">1日目</span> 大津京発 → <b>東海北陸道経由</b>で五箇山 菅沼集落（世界遺産・相倉より静か）</li>
+    <li><span class="t">午後</span> 立山山麓へ移動。大辻山 or 鍬崎山を軽く登る／立山カルデラ砂防博物館</li>
+    <li><span class="t">夕</span> 千寿荘 or グリーンビュー立山（千寿の湯）泊 → 猿倉山の花火（8/22 19:20）も射程</li>
+    <li><span class="t">2日目 朝</span> 立山駅 → <b>弥陀ヶ原</b>（室堂より安く空いている）で木道トレッキング 外回り1時間20分</li>
+    <li><span class="t">昼</span> 下山 → 称名滝展望台（往復1時間30分）</li>
+    <li><span class="t">午後</span> 立山吉峰温泉ゆ〜ランド → 新湊きっときと市場で白えび → 帰路</li>
+  </ol>
+</div>
+
+<div class="box">
+  <b>4人パーティで効いてくる実務メモ</b>
+  <ul>
+    <li>山小屋・アルペンルートともに<b>8月の土曜は最も予約が取りにくい枠</b>。宿とWEBきっぷは同時に押さえる。</li>
+    <li>体力差があるなら「雄山まで登る組」と「室堂平を歩く組」に分けても、みくりが池温泉で合流できる構造になっている。</li>
+    <li>山小屋泊は基本<b>相部屋または個室指定</b>。雷鳥沢ヒュッテの4名個室13,000円/人は4人にきれいに嵌まる。</li>
+    <li>車は立山駅の無料駐車場に置いたままアルペンルートを往復するのが基本形（長野側に抜けるなら車回送を手配）。</li>
+    <li>大阪組が電車で滋賀合流 → 大津京から1台で行くなら、運転交代を前提に早朝発が現実的。</li>
+  </ul>
+</div>
+
+<!-- ============ 9 ============ -->
+<h2 id="s9"><span class="num">09</span>主な出典</h2>
+<div class="box" style="border-left-color:var(--royal)">
+  <b>公式・一次情報</b>
+  <ul>
+    <li><a href="https://www.alpen-route.com/access_new/fare/person/index.php" style="color:var(--royal)">立山黒部アルペンルート 運賃</a>（2026年2月27日現在の表記）</li>
+    <li><a href="https://www.alpen-route.com/information/calendar/" style="color:var(--royal)">混雑予想カレンダー</a> ／ <a href="https://www.alpen-route.com/timetable/" style="color:var(--royal)">時刻表</a> ／ <a href="https://www.alpen-route.com/information/advice_clothes.html" style="color:var(--royal)">服装と持ち物</a></li>
+    <li><a href="https://www.info-toyama.com/stories/alpen-route-lp" style="color:var(--royal)">とやま観光ナビ【2026年版】アルペンルート完全ガイド</a></li>
+    <li><a href="https://railf.jp/news/2026/07/04/233000.html" style="color:var(--royal)">鉄道ファン：黒部峡谷鉄道 10月1日に全線運行再開</a> ／ <a href="https://www.tetsudo.com/news/3895/" style="color:var(--royal)">鉄道コム：2026年シーズンも猫又折り返し</a></li>
+    <li><a href="https://www.info-toyama.com/stories/canyonroute" style="color:var(--royal)">黒部宇奈月キャニオンルート 2026年10月2日開通</a></li>
+    <li><a href="https://ekitan.com/transit/fare/sf-6271/st-9749" style="color:var(--royal)">駅探：立山駅→室堂 片道4,090円／往復8,180円の内訳</a></li>
+  </ul>
+</div>
+<div class="box" style="border-left-color:var(--hidden)">
+  <b>登山・山小屋</b>
+  <ul>
+    <li><a href="https://yamatabitabi.com/archives/145692" style="color:var(--hidden)">山旅旅：立山三山1泊2日周回</a> ／ <a href="https://www.yamakei-online.com/yama-ya/detail.php?id=4193" style="color:var(--hidden)">山と溪谷：室堂から奥大日岳へ</a></li>
+    <li><a href="http://www.dainichigoya.jp/about/" style="color:var(--hidden)">大日小屋</a> ／ <a href="https://www.raichozawa.net/" style="color:var(--hidden)">雷鳥沢ヒュッテ</a> ／ <a href="https://www.raichoso.com/" style="color:var(--hidden)">雷鳥荘</a> ／ <a href="https://www.mikuri.com/stay/" style="color:var(--hidden)">みくりが池温泉</a></li>
+    <li><a href="https://yamachizu.jp/article/12946" style="color:var(--hidden)">山と高原地図Web：富山の初心者おすすめ6座（大辻山・鍬崎山）</a></li>
+    <li><a href="https://www.arukou-tateyama.com/course/course05.html" style="color:var(--hidden)">歩こう立山</a> ／ <a href="https://www.alpen-route.com/map_navi/trekking.html" style="color:var(--hidden)">公式トレッキングコース</a></li>
+  </ul>
+</div>
+<div class="box" style="border-left-color:var(--gold)">
+  <b>温泉・グルメ・観光</b>
+  <ul>
+    <li><a href="https://www.info-toyama.com/stories/onsen" style="color:var(--gold)">富山の温泉宿 名湯から秘湯まで</a> ／ <a href="https://www.asoview.com/note/6001/" style="color:var(--gold)">立山の日帰り温泉6選</a> ／ <a href="https://toyama-asbb.com/archives/54182" style="color:var(--gold)">富山の温泉地まとめ</a></li>
+    <li><a href="https://www.info-toyama.com/stories/toyama-gourmet" style="color:var(--gold)">富山グルメ総集編</a> ／ <a href="https://www.info-toyama.com/stories/toyama_kaitenzushi" style="color:var(--gold)">回転寿司8選（穴場含む）</a> ／ <a href="https://www.info-toyama.com/articles/shiho-tateyamagourmet" style="color:var(--gold)">立山町グルメ3選</a></li>
+    <li><a href="https://gokayama-info.jp/" style="color:var(--gold)">世界遺産五箇山 観光情報</a> ／ <a href="https://www.tatecal.or.jp/tatecal/hakubutu/haku-50.html" style="color:var(--gold)">立山カルデラ砂防博物館</a></li>
+    <li><a href="https://www.info-toyama.com/stories/fireworks-toyama" style="color:var(--gold)">富山の花火大会まとめ2026</a></li>
+  </ul>
+</div>
+
+<footer>
+  作成日：2026年7月30日。価格・運賃・営業期間はいずれも調査時点の公開情報で、変動します。<br>
+  とくに ①アルペンルート運賃（公式表記は2026年2月27日現在）②山小屋の8/22実売価格 ③室堂直行バスの8/22–23運行有無 ④猿倉山花火大会の開催 ⑤立山カルデラ砂防体験学習会の申込枠 は、予約前に一次情報での再確認をおすすめします。
+</footer>
+
+</div>
+<script>
+document.querySelectorAll('.filters button').forEach(function(b){
+  b.addEventListener('click', function(){
+    document.querySelectorAll('.filters button').forEach(function(x){x.classList.remove('on')});
+    b.classList.add('on');
+    var f = b.dataset.f;
+    document.querySelectorAll('[data-k]').forEach(function(c){
+      c.classList.toggle('hide', f !== 'all' && c.dataset.k !== f);
+    });
+  });
+});
+</script>
+</body>
+</html>
