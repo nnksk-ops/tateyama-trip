@@ -2,122 +2,648 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>立山 一泊二日｜2026年8月22日〜23日</title>
-<meta name="description" content="2026年8月22日〜23日・4名・大津京発の立山旅行プラン。選択式のプランビルダーと、登山・温泉・グルメ・観光の候補資料。">
-<meta property="og:title" content="立山 一泊二日｜2026年8月22日〜23日">
-<meta property="og:description" content="選んでいくと行程・費用・予約リストができるプランビルダーと、候補の調査資料。">
-<meta property="og:type" content="website">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0f1214">
+<title>立山旅行 8/22-23</title>
+<meta property="og:title" content="立山旅行 8/22-23｜好みを選ぶだけでプランができます">
+<meta property="og:description" content="6つの質問に答えるだけ。あなたの行きたいプランができます。">
 <style>
-:root{--bg:#0e1316;--card:#161d22;--card2:#1c252b;--line:#2a353d;--line2:#3a464e;
---tx:#e9eff3;--tx2:#a3b3be;--tx3:#74848c;--gold:#e3b04b;--royal:#4a9ede;--quiet:#7ed4a6;--pick:#ffd76e;}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--tx);line-height:1.75;
-font-family:-apple-system,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;font-size:15px}
+:root{
+  --bg:#0f1214; --sf:#191e21; --sf2:#222a2e; --bd:#2c3438; --bd2:#3d474d;
+  --tx:#f0f2f3; --mu:#9aa4a9; --mu2:#6f797e;
+  --ac:#f0a92e; --acd:#2a2113; --rd:#e07a70;
+  --pad:18px;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;padding:0}
+body{background:var(--bg);color:var(--tx);
+  font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+  font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
 img{display:block;max-width:100%}
-.hero{position:relative;height:320px;overflow:hidden}
-.hero img{width:100%;height:100%;object-fit:cover;opacity:.5}
-.hero .ov{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;
-padding:0 20px 24px;background:linear-gradient(180deg,rgba(14,19,22,.3),rgba(14,19,22,.9) 72%,var(--bg))}
-.hero .in{max-width:880px;margin:0 auto;width:100%}
-.date{color:var(--gold);font-size:.82rem;letter-spacing:.14em;font-weight:700;margin-bottom:6px}
-h1{font-size:1.85rem;margin:0 0 8px;text-shadow:0 2px 14px rgba(0,0,0,.7)}
-.sub{color:#cfdae2;font-size:.9rem}
-.wrap{max-width:880px;margin:0 auto;padding:0 20px 70px}
-.chips{display:flex;gap:7px;flex-wrap:wrap;margin:20px 0 8px}
-.chip{background:var(--card2);border:1px solid var(--line);border-radius:999px;padding:3px 13px;font-size:.78rem;color:var(--tx2)}
-h2{font-size:1.05rem;margin:36px 0 12px;padding-bottom:8px;border-bottom:1px solid var(--line);color:var(--tx2);font-weight:700}
-.cards{display:grid;gap:14px}
-a.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:12px;
-padding:20px 22px;text-decoration:none;color:var(--tx);transition:.15s;border-left:3px solid var(--line2)}
-a.card:hover{border-color:var(--line2);transform:translateY(-2px);background:#19222a}
-a.card.main{border-left-color:var(--pick)}
-a.card.g{border-left-color:var(--quiet)}
-a.card.b{border-left-color:var(--royal)}
-a.card .t{font-size:1.1rem;font-weight:700;display:flex;align-items:center;gap:10px;margin-bottom:5px}
-a.card .t .ic{font-size:1.25rem}
-a.card .t .go{margin-left:auto;color:var(--tx3);font-size:.85rem}
-a.card:hover .t .go{color:var(--pick)}
-a.card .d{color:var(--tx2);font-size:.86rem;margin-bottom:8px}
-a.card .m{display:flex;gap:6px;flex-wrap:wrap}
-a.card .m span{font-size:.71rem;background:var(--card2);border:1px solid var(--line);border-radius:4px;padding:1px 8px;color:var(--tx3)}
-.badge{font-size:.66rem;font-weight:800;background:var(--pick);color:#2b2100;border-radius:4px;padding:2px 8px;letter-spacing:.04em}
-.box{background:var(--card2);border:1px solid var(--line);border-left:3px solid var(--gold);
-border-radius:8px;padding:15px 17px;margin:18px 0;font-size:.85rem;color:var(--tx2)}
-.box.w{border-left-color:#e57373}
-.box b{color:var(--tx)}
-.box ul{margin:8px 0 0;padding-left:20px}.box li{margin:4px 0}
-footer{margin-top:44px;padding-top:20px;border-top:1px solid var(--line);color:var(--tx3);font-size:.76rem}
-@media(max-width:600px){.hero{height:230px}h1{font-size:1.3rem}.wrap{padding:0 16px 50px}}
+button{font-family:inherit;font-size:inherit;cursor:pointer;border:none;background:none;color:inherit}
+
+/* ---------- top bar ---------- */
+#top{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--bg);
+  padding:env(safe-area-inset-top) 0 0}
+#top .in{display:flex;align-items:center;gap:10px;height:52px;padding:0 12px;
+  max-width:620px;margin:0 auto}
+#back{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;
+  justify-content:center;font-size:1.35rem;color:var(--mu);flex:none}
+#back:active{background:var(--sf)}
+#back.hide{visibility:hidden}
+#pg{flex:1;height:4px;background:var(--sf2);border-radius:99px;overflow:hidden}
+#pg i{display:block;height:100%;background:var(--ac);border-radius:99px;
+  transition:width .35s cubic-bezier(.4,0,.2,1);width:0}
+#cnt{font-size:.8rem;color:var(--mu2);font-variant-numeric:tabular-nums;flex:none;min-width:34px;text-align:right}
+
+/* ---------- page ---------- */
+main{max-width:620px;margin:0 auto;padding:70px var(--pad) 130px}
+.qh{margin:6px 0 20px}
+.qh h1{font-size:1.5rem;line-height:1.4;margin:0;font-weight:700;letter-spacing:-.01em}
+.qh p{margin:8px 0 0;color:var(--mu);font-size:.92rem;line-height:1.6}
+
+/* ---------- choice rows ---------- */
+.list{display:flex;flex-direction:column;gap:10px}
+.row{display:flex;align-items:center;gap:14px;width:100%;text-align:left;
+  background:var(--sf);border:2px solid var(--sf);border-radius:14px;
+  padding:14px 16px;transition:border-color .12s,background .12s}
+.row:active{background:var(--sf2)}
+.row.sel{border-color:var(--ac);background:var(--acd)}
+.row .em{font-size:1.7rem;flex:none;line-height:1}
+.row .tx{flex:1;min-width:0}
+.row .t1{font-size:1.02rem;font-weight:700;line-height:1.45}
+.row .t2{font-size:.85rem;color:var(--mu);line-height:1.5;margin-top:2px}
+.row .mk{width:26px;height:26px;border-radius:50%;border:2px solid var(--bd2);flex:none;
+  display:flex;align-items:center;justify-content:center;font-size:.8rem;font-weight:900;color:transparent}
+.row.sel .mk{background:var(--ac);border-color:var(--ac);color:var(--acd)}
+
+/* ---------- photo cards ---------- */
+.cards{display:flex;flex-direction:column;gap:11px}
+.pc{display:flex;gap:0;width:100%;text-align:left;background:var(--sf);
+  border:2px solid var(--sf);border-radius:14px;overflow:hidden;transition:border-color .12s}
+.pc:active{background:var(--sf2)}
+.pc.sel{border-color:var(--ac)}
+.pc .im{width:112px;flex:none;background:var(--sf2);position:relative;overflow:hidden}
+.pc .im img{width:100%;height:100%;object-fit:cover;min-height:100px}
+.pc .bd{flex:1;min-width:0;padding:12px 12px 12px 14px;display:flex;align-items:center;gap:10px}
+.pc .tx{flex:1;min-width:0}
+.pc .t1{font-size:1rem;font-weight:700;line-height:1.4}
+.pc .t2{font-size:.82rem;color:var(--ac);margin-top:3px;font-variant-numeric:tabular-nums}
+.pc .t3{font-size:.79rem;color:var(--mu);margin-top:3px;line-height:1.45}
+.pc .mk{width:26px;height:26px;border-radius:50%;border:2px solid var(--bd2);flex:none;
+  display:flex;align-items:center;justify-content:center;font-size:.8rem;font-weight:900;color:transparent}
+.pc.sel .mk{background:var(--ac);border-color:var(--ac);color:var(--acd)}
+.pc .osusume{position:absolute;top:0;left:0;background:var(--ac);color:var(--acd);
+  font-size:.66rem;font-weight:800;padding:2px 7px;border-bottom-right-radius:8px;letter-spacing:.03em}
+
+/* ---------- bottom ---------- */
+#bot{position:fixed;left:0;right:0;bottom:0;z-index:50;
+  background:linear-gradient(180deg,rgba(15,18,20,0),var(--bg) 26%);
+  padding:26px var(--pad) calc(16px + env(safe-area-inset-bottom))}
+#bot .in{max-width:620px;margin:0 auto}
+.big{width:100%;background:var(--ac);color:var(--acd);border-radius:14px;
+  padding:16px;font-size:1.05rem;font-weight:800;letter-spacing:.02em}
+.big:active{opacity:.82}
+.big[disabled]{background:var(--sf2);color:var(--mu2)}
+.skip{width:100%;text-align:center;color:var(--mu);font-size:.87rem;padding:13px 0 2px}
+.skip:active{color:var(--tx)}
+
+/* ---------- welcome ---------- */
+#hero{margin:-70px calc(var(--pad)*-1) 0;height:44vh;min-height:230px;max-height:340px;
+  position:relative;overflow:hidden}
+#hero img{width:100%;height:100%;object-fit:cover;opacity:.62}
+#hero .ov{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;
+  padding:0 var(--pad) 22px;background:linear-gradient(180deg,rgba(15,18,20,.35),rgba(15,18,20,.55) 45%,var(--bg))}
+#hero .dt{color:var(--ac);font-size:.82rem;font-weight:800;letter-spacing:.1em}
+#hero h1{font-size:2rem;margin:4px 0 0;line-height:1.25;font-weight:800}
+#hero .sb{color:#d3dade;font-size:.92rem;margin-top:6px}
+.lead{margin:22px 0 0}
+.lead p{margin:0 0 14px;font-size:1rem;line-height:1.75}
+.lead .num{display:flex;gap:12px;align-items:flex-start;margin:0 0 12px}
+.lead .num b{width:26px;height:26px;border-radius:50%;background:var(--sf2);color:var(--ac);
+  font-size:.82rem;display:flex;align-items:center;justify-content:center;flex:none;margin-top:2px}
+.lead .num span{font-size:.95rem;color:var(--mu);line-height:1.6}
+.lead .num span i{font-style:normal;color:var(--tx)}
+
+/* ---------- result ---------- */
+.rz{text-align:center;padding:6px 0 4px}
+.rz .ok{font-size:2.6rem;line-height:1}
+.rz h1{font-size:1.45rem;margin:10px 0 0;font-weight:800}
+.rz p{color:var(--mu);font-size:.9rem;margin:6px 0 0}
+.plan{background:var(--sf);border-radius:16px;padding:18px;margin:20px 0 0}
+.plan .lb{font-size:.74rem;color:var(--mu2);letter-spacing:.09em;font-weight:700}
+.plan .v1{font-size:1.22rem;font-weight:800;line-height:1.4;margin-top:3px}
+.plan .v2{font-size:.87rem;color:var(--mu);margin-top:3px}
+.plan hr{border:none;border-top:1px solid var(--bd);margin:15px 0}
+.money{display:flex;align-items:baseline;gap:8px;margin-top:3px}
+.money b{font-size:1.9rem;color:var(--ac);font-weight:800;font-variant-numeric:tabular-nums;line-height:1.1}
+.money span{font-size:.85rem;color:var(--mu)}
+
+h2.s{font-size:1.02rem;font-weight:800;margin:30px 0 12px}
+.tl{list-style:none;margin:0;padding:0}
+.tl li{display:flex;gap:13px;padding:9px 0;border-bottom:1px solid #1e2427}
+.tl li:last-child{border:none}
+.tl .tm{flex:none;width:82px;color:var(--ac);font-size:.83rem;font-weight:700;
+  font-variant-numeric:tabular-nums;padding-top:1px}
+.tl .ac{flex:1;font-size:.94rem;line-height:1.5}
+.dayl{font-size:.8rem;font-weight:800;color:var(--mu);background:var(--sf);
+  padding:7px 12px;border-radius:8px;margin:16px 0 6px}
+.dayl:first-child{margin-top:0}
+
+.note{display:flex;gap:11px;background:var(--sf);border-radius:12px;padding:13px 15px;
+  margin:9px 0;font-size:.9rem;line-height:1.6;color:var(--mu)}
+.note.w{background:#2a1c1b;color:#f0cbc6}
+.note .i{flex:none;font-size:1rem;line-height:1.5}
+.note b{color:var(--tx)}
+
+.pills{display:flex;flex-wrap:wrap;gap:7px}
+.pills span{background:var(--sf);border-radius:99px;padding:6px 14px;font-size:.85rem;color:var(--mu)}
+
+.acts{display:flex;flex-direction:column;gap:10px;margin-top:12px}
+.acts button{width:100%;padding:15px;border-radius:13px;font-size:.98rem;font-weight:700;
+  background:var(--sf);color:var(--tx)}
+.acts button.p{background:var(--ac);color:var(--acd);font-weight:800}
+.acts button:active{opacity:.82}
+.foot{text-align:center;margin:32px 0 0;font-size:.83rem;color:var(--mu2);line-height:2}
+.foot a{color:var(--mu);text-decoration:none;border-bottom:1px solid var(--bd2)}
+
+#toast{position:fixed;left:50%;bottom:110px;transform:translate(-50%,10px);
+  background:var(--tx);color:var(--bg);padding:11px 22px;border-radius:99px;
+  font-size:.9rem;font-weight:800;z-index:99;opacity:0;pointer-events:none;transition:.22s}
+#toast.on{opacity:1;transform:translate(-50%,0)}
+#ta{position:fixed;left:-9999px;top:0}
+@media(min-width:620px){ .pc .im{width:150px} }
 </style>
 </head>
 <body>
 
-<div class="hero">
-  <img src="https://www.info-toyama.com/storage/special_features/302/responsive_images/w8TMy5lExikawmh9ua8nHDLsmtw3qFUs36ft2iyi__1280_720.png" alt="立山黒部アルペンルート">
-  <div class="ov"><div class="in">
-    <div class="date">2026.08.22 SAT — 08.23 SUN</div>
-    <h1>立山 一泊二日</h1>
-    <div class="sub">4名／大津京発・車（大阪組は電車で滋賀合流）</div>
-  </div></div>
-</div>
+<div id="top"><div class="in">
+  <button id="back" class="hide" aria-label="戻る">‹</button>
+  <div id="pg"><i></i></div>
+  <div id="cnt"></div>
+</div></div>
 
-<div class="wrap">
-  <div class="chips">
-    <span class="chip">登山：室堂周辺＋縦走＋立山以外</span>
-    <span class="chip">温泉：マスト</span>
-    <span class="chip">宿：1.5万円以下</span>
-    <span class="chip">混雑回避重視</span>
-  </div>
+<main id="app"></main>
 
-  <h2>ここから始める</h2>
-  <div class="cards">
-    <a class="card main" href="plan.html">
-      <div class="t"><span class="ic">🧭</span>プランを作る <span class="badge">MAIN</span><span class="go">→</span></div>
-      <div class="d">4つの質問で方向性を決めて、登山・宿・温泉・グルメ・観光を選ぶだけ。時刻入りの2日間行程、1人あたりの費用、予約チェックリストが自動でできます。矛盾（山上泊なのに花火を選ぶ等）は警告が出ます。</div>
-      <div class="m"><span>選択式</span><span>行程を自動生成</span><span>費用を自動計算</span><span>URLで共有できる</span></div>
-    </a>
-  </div>
+<div id="bot"><div class="in"></div></div>
+<div id="toast"></div>
+<textarea id="ta" readonly></textarea>
 
-  <h2>候補を見比べる</h2>
-  <div class="cards">
-    <a class="card g" href="guide.html">
-      <div class="t"><span class="ic">📸</span>資料（写真・図解つき）<span class="go">→</span></div>
-      <div class="d">登山13コースを体力・技術・混雑・絶景の★5段階で採点した比較表と散布図。標高プロファイル、宿の価格帯チャート、行程タイムライン。温泉・グルメ・観光の候補を王道／穴場のボタンで切り替えられます。</div>
-      <div class="m"><span>写真66点</span><span>図解5点</span><span>候補65件</span><span>王道/穴場フィルタ</span></div>
-    </a>
-    <a class="card b" href="notes.html">
-      <div class="t"><span class="ic">📄</span>資料（テキスト版）<span class="go">→</span></div>
-      <div class="d">同じ内容の軽量版。写真を読み込まないので表示が速く、検索や引用に向いています。</div>
-      <div class="m"><span>軽量</span><span>出典リンクつき</span></div>
-    </a>
-  </div>
+<script>
+/* ============ 画像 ============ */
+var IT='https://www.info-toyama.com/storage/';
+function Y(i){return 'https://img.youtube.com/vi/'+i+'/hqdefault.jpg'}
+var P={
+ mikuri:IT+'tourism_attractions/31017/responsive_images/HZaESeYLBryLEUHXlCz707L61xB0p1rQjkLvCO8E__1673_1115.jpeg',
+ alpen:IT+'special_features/302/responsive_images/w8TMy5lExikawmh9ua8nHDLsmtw3qFUs36ft2iyi__1280_720.png',
+ cool:IT+'special_features/999/responsive_images/b8LFKlEWkZdKYcDXzmxxCG0dPPdCQV59GEYIxej2__1280_720.png',
+ taki:IT+'tourism_attractions/103236/responsive_images/ix7HHhk1XoqRXQp1P74ettmDQFD6rYrQ40p3HUlC__1771_1089.jpeg',
+ sanroku:IT+'tourism_attractions/103341/responsive_images/buSWZVySy9Jw5IdPAjWS3NEPx9XP9tr0JH7rxGtJ__1673_1115.jpeg',
+ keikoku:IT+'tourism_attractions/102799/responsive_images/CVGjyVA4rW5wmipTwnT7C1BbZRhHsuJHNwCKtR09__1571_1047.jpeg',
+ alps:IT+'special_feature_paragraphs/3189/responsive_images/Y4WFYeHcxPxbb0wYXFuIKnM8k1cWznBRuFfRLuOL__1606_1071.jpeg',
+ murodo:IT+'special_feature_paragraphs/3189/responsive_images/Cevj7dWiR5BKO8IPiKjxzSYtO0cxZoSyW1Mnr6Xn__1124_749.jpeg',
+ murodo2:IT+'special_feature_paragraphs/3189/responsive_images/TRlVw4L4k8OE8aNcWprjIQeOdy0s4Hwe1s0qufAL__1606_1071.jpeg',
+ mikurio:IT+'special_feature_paragraph_contents/2615/HMPUNAhrKWy3OJhAWkffQdWPNyERkp34KYU1Ud2V.webp',
+ eki:IT+'special_feature_paragraphs/3183/responsive_images/R5j5OlPZZV3KiGFacQRv56ZOZu22UJI34fkUEg4P__1606_1071.jpeg',
+ roten:IT+'tourism_attractions/102895/responsive_images/tiCEaPc1pJ8TxMNIsC0IMby2QB1IEEszjH6cPDQD__1673_1115.jpeg',
+ mori:IT+'special_feature_paragraph_contents/5584/responsive_images/uMKffkAYArkCPnSEQGQyHDGBlJGbekJxfGtm1vna__545_369.jpeg',
+ karuna:IT+'special_feature_paragraph_contents/5683/responsive_images/oPFIMA7MsQdHwTurYZyQGfLvHzbDFOVKnlwoUGN5__1765_1177.jpeg',
+ ogawa:IT+'tourism_attractions/80003/responsive_images/5kONMUpJ48xcqEtvWDMYhjbyfSXkNmyBNz7wbUUd__550_365.jpeg',
+ iso:IT+'tourism_attractions/90124/responsive_images/tR4kQOCOsjfBEvH9BtQ2IOsGbGtFlPTzgZImo7UT__1679_1259.jpeg',
+ oomaki:IT+'special_feature_paragraph_contents/2618/Cafnf5o9wqBTjP5ad9eUE1N6A5wR5ratWxE0cxXl.webp',
+ entou:IT+'tourism_attractions/91000/responsive_images/Xeu31CuJNggdvx9MV21vK8UUm2fBWn1LiwnH8wfC__1726_1151.jpeg',
+ kurobe:IT+'tourism_attractions/91040/responsive_images/fjL1H5FMUmkw9Z3ndZ7mzCBP8csEP0DsbFNVwJ3Z__1756_1168.jpeg',
+ aino:IT+'tourism_attractions/41003/responsive_images/nDIw5UsT1HeQf7bTc9OKNOvUxtaxntvIfHSU1Neu__1679_944.jpeg',
+ suga:IT+'special_feature_paragraphs/446/responsive_images/oxSJQHLCEXNVk5wc7C5w5mP1X90TfTZOAe04zrQp__1673_1117.jpeg',
+ sabo:IT+'special_feature_paragraph_contents/6072/responsive_images/1NC023IRZoG9axH2BBStxGnfQ5R3ZSQ253zzLKu0__572_429.jpeg',
+ yakei:IT+'special_feature_paragraphs/452/responsive_images/Lakkz4latNvW6zSOZTCi5MuUKwbtDZfgMb5bVGMl__1673_1113.jpeg',
+ uchi:IT+'special_feature_paragraph_contents/6070/responsive_images/QmAFj0Z6j9MK22zzj5LmCIzBcmH3M0IQWdCChwIy__514_342.jpeg',
+ soumen:IT+'special_feature_paragraph_contents/6073/responsive_images/asfJqhiJU9LzyJej44ZQCAwCHF20TnyhcLI9mi5u__1606_1071.jpeg',
+ sakana:IT+'special_feature_paragraph_contents/271/responsive_images/krhRdb8or0JyHoA67AcF1qmpKGDK8SYSmLVEweSo__1574_1049.jpeg',
+ tofu:IT+'special_feature_paragraph_contents/270/responsive_images/KzsQyDLJ1bq4pkI41vmLQeTNP4OiHl5y756d74tJ__1001_819.jpeg',
+ suika:IT+'special_feature_paragraph_contents/6075/responsive_images/uSA6bbnW5kkRKMaXbQosGuHPWHu1rEs3nwSAi8q2__1089_817.jpeg'
+};
+var TSUKARE=['','らくに歩ける','すこし疲れる','しっかり歩く','かなりきつい','とてもきつい'];
+var HITO=['','ほとんど人がいない','人が少ない','ふつう','やや多い','とても多い'];
 
-  <h2>先に知っておくこと</h2>
-  <div class="box w">
-    <b>2026年8月の時点で使えないもの</b>
-    <ul>
-      <li><b>黒部峡谷鉄道は欅平まで行けません。</b>能登半島地震の鐘釣橋被災で猫又折り返し。全線再開は<b>2026年10月1日</b>から。祖母谷温泉・名剣温泉といった欅平の秘湯は今回は不可です。</li>
-      <li><b>黒部宇奈月キャニオンルートは2026年10月2日開通。</b>8月は不可。</li>
-      <li><b>雪の大谷は6月25日で終了。</b>8月は雪の壁なし。</li>
-      <li><b>8/22は土曜。</b>立山ケーブルカーが最大のボトルネックです。WEBきっぷの事前購入がほぼ必須。</li>
-    </ul>
-  </div>
-  <div class="box">
-    <b>この時期ならではの良さ</b>
-    <ul>
-      <li>8月下旬はチングルマ・ナナカマドが色づき始める<b>「紅葉の走り」</b>。高山植物と初期紅葉が同時に見られます。</li>
-      <li>雷鳥はヒナ連れシーズン。みくりが池温泉テラス直下、ミドリガ池横の尾根のハイマツ帯が定番。</li>
-      <li>室堂は<b>10〜20℃</b>。同じ時刻に立山駅は24〜32℃、富山市街は26〜34℃。装備は「脱げる前提」で。</li>
-      <li>白えびは春〜夏が旬。8月はまだ間に合います。</li>
-    </ul>
-  </div>
+/* ============ 選択肢 ============ */
+var Q1=[
+ {id:'peak',em:'⛰',t:'高い山のてっぺんに立ちたい',s:'3,000mの頂上まで登ります'},
+ {id:'quiet',em:'🌿',t:'人の少ない静かな場所がいい',s:'混んでいない道で景色を楽しみます'},
+ {id:'relax',em:'♨️',t:'あまり歩かず、温泉と食事を楽しみたい',s:'平らな道を少し歩くだけ'}];
+var Q2=[
+ {id:1,em:'🚶',t:'1〜2時間',s:'散歩くらい。ふつうの靴でも歩けます'},
+ {id:2,em:'🥾',t:'半日（4〜5時間）',s:'ふつうの登山。運動する人なら大丈夫'},
+ {id:3,em:'🧗',t:'1日じっくり（7〜8時間）',s:'朝から夕方まで歩きます'},
+ {id:4,em:'🏕',t:'2日とも しっかり歩きたい',s:'山の上に泊まって2日間歩きます'}];
+var Q3=[
+ {id:'summit',em:'✨',t:'山の上',s:'標高2,400m。星がすごい。お風呂もあります'},
+ {id:'foot',em:'🛏',t:'ふもとの宿',s:'お風呂と食事がゆったり。夜も出かけられます'},
+ {id:'either',em:'🤷',t:'どちらでもいい',s:'両方見てから決めます'}];
 
-  <footer>
-    作成：2026年7月30日。価格・運賃・営業期間は調査時点の公開情報で、変動します。予約前に一次情報での再確認をおすすめするのは、①アルペンルート運賃 ②山小屋の8/22実売価格と空室 ③室堂直行バスの8/22–23運行有無 ④猿倉山森林公園 花火大会の開催 ⑤立山カルデラ砂防体験学習会の申込枠 の5点です。<br><br>
-    写真は富山県公式観光サイト「とやま観光ナビ」およびYouTubeのサムネイルを参照表示しています。★評価は公開情報をもとにした相対的な目安で、公式の等級ではありません。
-  </footer>
-</div>
+/* ============ データ ============ */
+var HIKES=[
+ {id:'murodowalk',n:'室堂平を1周する',k:'1時間30分・平らな道',rank:'B',goals:['relax','peak'],tier:1,hrs:1.5,alpen:'murodo',img:P.mikuri,st:1,cr:5,
+  d:'池のまわりをぐるっと歩きます。ふつうの靴でもOK。ライチョウに会えることも。'},
+ {id:'midagahara',n:'弥陀ヶ原の木道を歩く',k:'1時間20分・木の歩道',rank:'A',goals:['relax','quiet'],tier:1,hrs:1.3,alpen:'midagahara',img:P.alpen,st:1,cr:2,
+  d:'湿原に3,000個の小さな池が広がります。山の上より人がずっと少なく、バス代も安いです。'},
+ {id:'shomyohike',n:'称名滝を見に行く',k:'1時間30分・往復',rank:'B',goals:['relax'],tier:1,hrs:1.5,alpen:'none',img:P.taki,st:1,cr:4,
+  d:'落差350m、日本一の滝。ケーブルカーに乗らずに車で行けます。'},
+ {id:'otsuji',n:'大辻山に登る',k:'4時間・1,361m',rank:'A',goals:['quiet','relax'],tier:2,hrs:4,alpen:'none',img:P.sanroku,st:2,cr:1,
+  d:'ふもとの低い山。頂上から立山と剱岳が正面に見えます。ケーブルカー代がかからず、人もほとんどいません。'},
+ {id:'oyama',n:'雄山の頂上へ（3,003m）',k:'4時間30分・3,003m',rank:'A',goals:['peak'],tier:2,hrs:4.5,alpen:'murodo',img:Y('dBM6A47sov4'),st:2,cr:5,
+  d:'富山の小学生も登る山です。最後は岩の道。頂上に神社があります。'},
+ {id:'dainichidaira',n:'大日平の湿原へ',k:'5時間・往復',rank:'B',goals:['quiet'],tier:2,hrs:5,alpen:'none',img:P.keikoku,st:3,cr:1,
+  d:'最初に急な坂を600m登りますが、そのあとは静かな木道が続きます。ケーブルカー代は不要。'},
+ {id:'sanpo',n:'立山の3つの峰を歩いて温泉へ',k:'6時間・3,015m',rank:'A',goals:['peak'],tier:3,hrs:6,alpen:'murodo',img:Y('CZz1n1EEJ24'),st:3,cr:4,
+  d:'いちばん高い大汝山（3,015m）まで行き、そのまま下って温泉に入って帰ります。1日で頂上と温泉の両方。'},
+ {id:'kuwasaki',n:'鍬崎山に登る',k:'7時間・2,090m',rank:'B',goals:['quiet'],tier:3,hrs:7,alpen:'none',img:P.alps,st:4,cr:1,
+  d:'人が少なく静かな山。埋蔵金の伝説があります。ふもとの温泉とセットにしやすい場所。'},
+ {id:'okudainichi',n:'奥大日岳へ（剱岳が目の前）',k:'7時間30分・2,611m',rank:'S',goals:['quiet'],tier:3,hrs:7.5,alpen:'murodo',img:Y('t8FcOUNnFg0'),st:4,cr:2,
+  d:'人が少ないのに、剱岳が壁のように目の前にそびえます。景色をとるならここ。'},
+ {id:'sanzan',n:'立山の3つの山を2日で歩く',k:'2日間・3,015m',rank:'A',goals:['peak'],tier:4,hrs:10,alpen:'murodo',img:Y('z0Sq38EfhaE'),two:true,h1:300,h2:300,st:4,cr:3,
+  d1:'浄土山→雄山→大汝山を通って宿へ（約5時間）',d2:'別山を通って下山（約5時間）',
+  d:'2日かけて3つの山を全部まわります。剱岳の全体が見えるのは、ここまで行った人だけ。'},
+ {id:'dainichi3',n:'ランプの宿に泊まる2日間',k:'2日間・1日目8時間',rank:'S',goals:['quiet'],tier:4,hrs:12,alpen:'oneway',img:Y('aqeW5jCRhCY'),two:true,h1:480,h2:240,forceStay:'dainichigoya',st:5,cr:1,
+  d1:'山の上から尾根を歩いて大日小屋へ（約8時間）',d2:'下りながら湿原を通り、称名滝へ（約4時間）',
+  d:'電気のない、ランプだけの小屋に泊まります。ご主人がギター職人で、夜はギターの音が聞こえます。最後は日本一の滝に出ます。'},
+ {id:'goshiki',n:'五色ヶ原に泊まる2日間',k:'2日間・片道7km',rank:'A',goals:['quiet'],tier:4,hrs:11,alpen:'murodo',img:Y('HEDpClMlDSo'),two:true,h1:330,h2:300,forceStay:'goshikisanso',st:4,cr:1,
+  d1:'尾根を歩いて五色ヶ原山荘へ（約5時間30分）',d2:'同じ道を戻ります（約5時間）',
+  d:'池とお花畑が広がる別世界。人がとても少ない場所です。途中に急な下りがあります。'},
+ {id:'yakushi',n:'薬師岳に登る2日間',k:'2日間・2,926m',rank:'C',goals:['quiet','peak'],tier:4,hrs:13,alpen:'none',img:Y('E9X6vMu5vb4'),two:true,h1:420,h2:420,forceStay:'yakushisanso',st:5,cr:2,
+  d1:'登山口から山小屋まで（長い道のり）',d2:'頂上へ行って下山（長い道のり）',
+  d:'「北アルプスの貴婦人」と呼ばれる大きな山。ただし2日間ではかなり厳しい行程です。'}];
 
+var STAYS=[
+ {id:'raichozawa',n:'雷鳥沢ヒュッテ',k:'13,000円',rank:'S',area:'summit',onsen:true,price:13000,img:Y('KTFiUszhbms'),
+  d:'温泉つき。4人ひと部屋で1人13,000円（2食つき）なので、4人にちょうどいい宿です。'},
+ {id:'murodosanso',n:'立山室堂山荘',k:'10,450円〜',rank:'A',area:'summit',onsen:true,price:10450,img:P.murodo,
+  d:'いちばん安い宿。バス停からすぐで、お風呂もあります。'},
+ {id:'raichoso',n:'雷鳥荘',k:'10,850円〜',rank:'A',area:'summit',onsen:true,price:10850,img:P.murodo2,
+  d:'景色を見ながら入れるお風呂があります。'},
+ {id:'mikurigaike',n:'みくりが池温泉',k:'13,500円〜',rank:'S',area:'summit',onsen:true,price:13500,img:P.mikurio,
+  d:'日本でいちばん高い場所（2,410m）にある温泉宿。白いにごり湯です。人気なので早めの予約を。'},
+ {id:'camp',n:'テントを張る',k:'500円',rank:'B',area:'summit',onsen:false,price:500,img:Y('z0Sq38EfhaE'),
+  d:'1人500円。テントと寝袋が必要です。お風呂は近くの宿で入れます。'},
+ {id:'dainichigoya',n:'大日小屋（ランプの宿）',k:'13,000円〜',rank:'S',area:'mountain',onsen:false,price:13000,img:Y('aqeW5jCRhCY'),onlyFor:'dainichi3',
+  d:'電気のないランプの小屋。目の前に剱岳が見えます。'},
+ {id:'goshikisanso',n:'五色ヶ原山荘',k:'約11,000円',rank:'A',area:'mountain',onsen:false,price:11000,img:Y('HEDpClMlDSo'),onlyFor:'goshiki',
+  d:'池とお花畑に囲まれた山小屋です。'},
+ {id:'yakushisanso',n:'薬師岳山荘',k:'約12,000円',rank:'C',area:'mountain',onsen:false,price:12000,img:Y('E9X6vMu5vb4'),onlyFor:'yakushi',
+  d:'頂上のすぐ下にある山小屋です。'},
+ {id:'senjuso',n:'千寿荘',k:'約11,000円',rank:'S',area:'foot',onsen:false,price:11000,img:P.eki,
+  d:'ケーブルカー乗り場まで歩いて30秒。朝いちばんの便に乗るならここが一番ラクです。'},
+ {id:'greenview',n:'グリーンビュー立山',k:'14,200円〜',rank:'A',area:'foot',onsen:true,price:14200,img:P.roten,
+  d:'温泉つき。ケーブルカーの駅から歩いて3分です。'},
+ {id:'morinokaze',n:'ホテル森の風立山',k:'約14,000円',rank:'B',area:'foot',onsen:true,price:14000,img:P.mori,
+  d:'大きなホテル。お風呂もサウナもあって設備が快適です。'},
+ {id:'tenbo',n:'天望立山荘',k:'約11,000円',rank:'A',area:'midagahara',onsen:false,price:11000,img:P.cool,
+  d:'山の中腹にある宿。上より静かで、星を見る企画もあります。'}];
+
+var ONSENS=[
+ {id:'o-mikuri',n:'みくりが池温泉',k:'約800円',rank:'S',area:'summit',fee:800,img:P.mikurio,stayId:'mikurigaike',d:'日本でいちばん高い場所にある温泉。白いにごり湯です。'},
+ {id:'o-raichoso',n:'雷鳥荘のお風呂',k:'800円',rank:'A',area:'summit',fee:800,img:P.murodo2,stayId:'raichoso',d:'景色を見ながら入れます。11時から20時まで。'},
+ {id:'o-murodo',n:'立山室堂山荘のお風呂',k:'700円',rank:'A',area:'summit',fee:700,img:P.murodo,stayId:'murodosanso',d:'いちばん安く、バス停からいちばん近い温泉です。'},
+ {id:'o-raichozawa',n:'雷鳥沢ヒュッテのお風呂',k:'約800円',rank:'A',area:'summit',fee:800,img:Y('KTFiUszhbms'),stayId:'raichozawa',d:'下山の途中にあるので、そのまま入れます。'},
+ {id:'o-senju',n:'千寿の湯',k:'約700円',rank:'S',area:'foot',fee:700,img:P.roten,stayId:'greenview',d:'ケーブルカーを降りて3分。下山してすぐ入れます。'},
+ {id:'o-yoshimine',n:'吉峰温泉',k:'約700円',rank:'A',area:'foot',fee:700,img:P.entou,d:'露天風呂とサウナがあります。21時まで。帰り道にあります。'},
+ {id:'o-awasuno',n:'あわすの温泉',k:'約1,000円',rank:'B',area:'foot',fee:1000,img:P.mori,stayId:'morinokaze',d:'「美肌の湯」と呼ばれる、とろっとしたお湯です。'},
+ {id:'o-karuna',n:'金太郎温泉',k:'約1,000円',rank:'A',area:'far',fee:1000,img:P.karuna,d:'夜23時30分まで開いています。下山が遅れても入れる安心の一軒。'},
+ {id:'o-ogawa',n:'小川温泉',k:'約1,000円',rank:'A',area:'far',fee:1000,img:P.ogawa,d:'洞窟の中にある露天風呂が名物です。'},
+ {id:'o-isohanabi',n:'雨晴温泉',k:'約1,000円',rank:'B',area:'far',fee:1000,img:P.iso,d:'湯船から海ごしに立山が見えます。'},
+ {id:'o-oomaki',n:'大牧温泉',k:'約3,000円',rank:'B',area:'far',fee:3000,img:P.oomaki,d:'船でしか行けない秘密の温泉。遊覧船に乗って向かいます。'}];
+
+var FOODS=[
+ {id:'f-black',n:'富山ブラック（ラーメン）',k:'富山市内',rank:'S',area:'city',img:Y('ZdEdRXrsFRI'),d:'真っ黒で塩気の強い醤油ラーメン。富山名物です。'},
+ {id:'f-shiroebi',n:'白えび',k:'新湊の市場',rank:'S',area:'coast',img:P.uchi,d:'富山湾でしかとれない小さなエビ。刺身やかき揚げで。8月はまだ食べられます。'},
+ {id:'f-sushi',n:'回転寿司',k:'8貫＋汁 680円〜',rank:'S',area:'city',img:Y('GW9oKeZzSJQ'),d:'富山の回転寿司はレベルが違います。値段のわりにネタがすごい。'},
+ {id:'f-masu',n:'ますのすし',k:'サービスエリア・駅',rank:'A',area:'anywhere',img:P.tofu,d:'有名な駅弁。お店ごとに味が違うので、4人で食べ比べができます。'},
+ {id:'f-kyodo',n:'氷見うどん・昆布じめ',k:'富山市内',rank:'A',area:'city',img:P.soumen,d:'富山の郷土料理。刺身を昆布ではさんだ「昆布じめ」は独特です。'},
+ {id:'f-itahashi',n:'鮨処 板はし',k:'立山町',rank:'S',area:'tateyama',img:P.sakana,d:'山のふもとにあるお寿司屋さん。市内まで出なくても食べられて、ランチが手ごろです。'},
+ {id:'f-aoki',n:'喫茶あおき',k:'ケーブルカー駅前',rank:'A',area:'tateyama',img:P.sabo,d:'駅の目の前。待ち時間や下山後にすぐ入れます。名物は溶岩カレー。'},
+ {id:'f-table',n:'The Table（要予約）',k:'立山町',rank:'B',area:'tateyama',img:P.sanroku,d:'ハーブ農園の中のレストラン。少しいいものを食べたいときに。'},
+ {id:'f-gokayama',n:'五箇山の豆腐と岩魚',k:'世界遺産の村',rank:'A',area:'gokayama',img:P.suika,d:'縄でしばっても崩れない固い豆腐と、川魚の握り寿司。合掌造りの茶屋で食べられます。'}];
+
+var SPOTS=[
+ {id:'s-shomyo',n:'称名滝',k:'1時間30分',rank:'S',area:'tateyama',img:P.taki,hrs:1.5,d:'落差350m、日本一の滝です。'},
+ {id:'s-sabo',n:'立山カルデラ砂防博物館',k:'1時間',rank:'S',area:'tateyama',img:P.sabo,hrs:1,d:'ケーブルカー駅のすぐそば。待ち時間に入れて、雨の日にも使えます。'},
+ {id:'s-suganuma',n:'五箇山 菅沼の集落',k:'1時間30分',rank:'S',area:'gokayama',img:P.suga,hrs:1.5,d:'世界遺産の合掌造りの村。小さくて静かなほうの集落です。'},
+ {id:'s-ainokura',n:'五箇山 相倉の集落',k:'1時間30分',rank:'A',area:'gokayama',img:P.aino,hrs:1.5,d:'世界遺産。20軒の合掌造りが残り、丘の上から全体を見下ろせます。'},
+ {id:'s-hanabi',n:'花火大会（22日の夜）',k:'19時20分〜',rank:'S',area:'city',img:P.cool,hrs:2,night:true,d:'川ぞいの会場で、山に音が反響します。ふもとに泊まる場合だけ行けます。'},
+ {id:'s-sengankei',n:'千巌渓・龍神の滝',k:'1時間30分',rank:'A',area:'tateyama',img:P.keikoku,hrs:1.5,d:'苔と清流のきれいな谷。夏でもひんやりします。'},
+ {id:'s-uchikawa',n:'新湊の内川',k:'1時間',rank:'A',area:'coast',img:P.uchi,hrs:1,d:'漁船が並ぶ川ぞいの町。「日本のベニス」と呼ばれます。'},
+ {id:'s-kurobe',n:'黒部ダム',k:'6時間・別料金',rank:'B',area:'kurobe',img:P.kurobe,hrs:6,heavy:true,d:'大迫力の放水が見られます。ただし往復6〜7時間かかり、料金も高くなります。'},
+ {id:'s-entou',n:'東山円筒分水槽',k:'30分',rank:'B',area:'far',img:P.entou,hrs:.5,d:'「日本一美しい」と言われる水の施設。見ているだけで涼しくなります。'},
+ {id:'s-yakei',n:'夜景スポット',k:'1時間',rank:'B',area:'city',img:P.yakei,hrs:1,night:true,d:'あまり知られていない静かな夜景の場所です。'},
+ {id:'s-arimine',n:'有峰湖',k:'2時間',rank:'B',area:'far',img:P.alps,hrs:2,d:'森に囲まれたダム湖。人がほとんどいません。'},
+ {id:'s-shiraiwa',n:'白岩砂防堰堤（要申込）',k:'5時間・抽選',rank:'A',area:'tateyama',img:P.keikoku,hrs:5,heavy:true,d:'ふだん入れない場所を案内してもらえるツアー。申し込みが必要です。'}];
+
+/* ============ 状態 ============ */
+var S={g:null,e:null,y:null,h:null,s:null,on:[],fd:[],sp:[]};
+var STEPS=['w','g','e','y','h','s','on','fd','sp','r'];
+var IDX=0;
+function by(a,i){for(var k=0;k<a.length;k++)if(a[k].id===i)return a[k];return null}
+function yen(n){return n.toLocaleString('ja-JP')+'円'}
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;')}
+function route(){return (S.sp.indexOf('s-suganuma')>=0||S.sp.indexOf('s-ainokura')>=0||S.fd.indexOf('f-gokayama')>=0)?'tokai':'hokuriku'}
+
+/* ============ URL ============ */
+var BOOT=true;
+function wURL(){ if(BOOT)return; var p=[];
+  if(S.g)p.push('g='+S.g); if(S.e)p.push('e='+S.e); if(S.y)p.push('y='+S.y);
+  if(S.h)p.push('h='+S.h); if(S.s)p.push('s='+S.s);
+  if(S.on.length)p.push('o='+S.on.join('.')); if(S.fd.length)p.push('f='+S.fd.join('.'));
+  if(S.sp.length)p.push('p='+S.sp.join('.')); p.push('i='+IDX);
+  history.replaceState(null,'','#'+p.join('&'))}
+function rURL(){ var hs=location.hash.replace(/^#/,''); if(!hs)return false; var ok=false;
+  hs.split('&').forEach(function(kv){var a=kv.split('='),k=a[0],v=decodeURIComponent(a[1]||''); if(!v)return;
+    if(k==='g'){S.g=v;ok=true} else if(k==='e'){S.e=+v;ok=true} else if(k==='y'){S.y=v;ok=true}
+    else if(k==='h')S.h=v; else if(k==='s')S.s=v;
+    else if(k==='o')S.on=v.split('.'); else if(k==='f')S.fd=v.split('.');
+    else if(k==='p')S.sp=v.split('.'); else if(k==='i')IDX=+v});
+  return ok}
+
+/* ============ 絞り込み ============ */
+function hL(){return HIKES.filter(function(o){
+  if(S.g&&o.goals.indexOf(S.g)<0)return false;
+  if(S.e&&o.tier>S.e)return false;
+  if(S.y==='summit'&&o.alpen==='none')return false;
+  return true}).sort(function(a,b){return (b.rank==='S')-(a.rank==='S')})}
+function sL(){var hk=S.h?by(HIKES,S.h):null;
+  if(hk&&hk.forceStay)return [by(STAYS,hk.forceStay)];
+  return STAYS.filter(function(o){ if(o.onlyFor)return false;
+    if(S.y==='summit')return o.area==='summit';
+    if(S.y==='foot')return o.area==='foot'||o.area==='midagahara';
+    return true}).sort(function(a,b){return (b.rank==='S')-(a.rank==='S')})}
+function oL(){return ONSENS.filter(function(o){
+  if(S.y==='foot'&&o.area==='summit'){var hk=S.h?by(HIKES,S.h):null;
+    if(!hk||hk.alpen==='none'||hk.alpen==='midagahara')return false}
+  return true})}
+function fL(){return FOODS}
+function pL(){return SPOTS}
+
+/* ============ 描画部品 ============ */
+var app=document.getElementById('app'), bot=document.querySelector('#bot .in');
+function head(t,s){return '<div class="qh"><h1>'+t+'</h1>'+(s?'<p>'+s+'</p>':'')+'</div>'}
+function rows(list,key){
+  return '<div class="list">'+list.map(function(o){
+    return '<button class="row'+(S[key]===o.id?' sel':'')+'" data-one="'+key+'" data-v="'+o.id+'">'
+      +'<span class="em">'+o.em+'</span><span class="tx"><span class="t1">'+o.t+'</span>'
+      +'<span class="t2">'+o.s+'</span></span><span class="mk">✓</span></button>'}).join('')+'</div>'}
+function pcards(list,key,multi,hike){
+  return '<div class="cards">'+list.map(function(o){
+    var sel = multi ? S[key].indexOf(o.id)>=0 : S[key]===o.id;
+    var t3 = hike ? (TSUKARE[o.st]+'・'+HITO[o.cr]) : o.d;
+    return '<button class="pc'+(sel?' sel':'')+'" data-'+(multi?'many':'one')+'="'+key+'" data-v="'+o.id+'">'
+      +'<span class="im">'+(o.rank==='S'?'<span class="osusume">おすすめ</span>':'')
+      +'<img loading="lazy" src="'+o.img+'" alt=""></span>'
+      +'<span class="bd"><span class="tx"><span class="t1">'+o.n+'</span>'
+      +'<span class="t2">'+o.k+'</span><span class="t3">'+t3+'</span></span>'
+      +'<span class="mk">✓</span></span></button>'}).join('')+'</div>'}
+
+/* ============ 画面 ============ */
+function screen(){
+  var k=STEPS[IDX], h='', b='';
+  if(k==='w'){
+    h='<div id="hero"><img src="'+P.alpen+'" alt=""><div class="ov">'
+     +'<div class="dt">2026年8月22日（土）— 23日（日）</div><h1>立山へ行きます</h1>'
+     +'<div class="sb">4人・車で日帰りなしの1泊2日</div></div></div>'
+     +'<div class="lead"><p>あなたの好みに合わせて、行き先と泊まる場所を決めます。</p>'
+     +'<div class="num"><b>1</b><span>かんたんな質問に<i>6つ</i>答えます</span></div>'
+     +'<div class="num"><b>2</b><span>写真を見ながら、行きたい場所を<i>タップ</i>して選びます</span></div>'
+     +'<div class="num"><b>3</b><span>時間・お金つきの<i>プランができあがります</i></span></div>'
+     +'<p style="color:var(--mu);font-size:.88rem;margin-top:18px">3分ほどで終わります。途中で戻れます。</p></div>';
+    b='<button class="big" data-go="1">はじめる</button>';
+  }
+  else if(k==='g'){ h=head('山では何がしたいですか？','いちばん近いものを選んでください')+rows(Q1,'g') }
+  else if(k==='e'){ h=head('どのくらい歩けますか？','いちばん体力のない人に合わせるのが安全です')+rows(Q2,'e') }
+  else if(k==='y'){ h=head('夜はどこで過ごしたい？','')+rows(Q3,'y') }
+  else if(k==='h'){ var l=hL();
+    h=head('行きたいコースを選んでください','あなたの答えに合う'+l.length+'つです')+pcards(l,'h',false,true);
+    if(S.h)b='<button class="big" data-go="1">次へ</button>' }
+  else if(k==='s'){ var sl=sL(), hk=S.h?by(HIKES,S.h):null;
+    if(hk&&hk.forceStay){S.s=hk.forceStay;
+      h=head('泊まるところは決まっています','このコースは、この宿に泊まる行程です')+pcards(sl,'s',false,false)}
+    else h=head('どこに泊まりますか？','料金は1人あたり・2食つきです')+pcards(sl,'s',false,false);
+    if(S.s)b='<button class="big" data-go="1">次へ</button>' }
+  else if(k==='on'){ h=head('入りたい温泉はありますか？','いくつでも選べます。あとで変えられます')+pcards(oL(),'on',true,false);
+    b='<button class="big" data-go="1">'+(S.on.length?S.on.length+'つ選んで次へ':'次へ')+'</button>'
+      +(S.on.length?'':'<button class="skip" data-go="1">選ばずに進む</button>') }
+  else if(k==='fd'){ h=head('食べたいものはありますか？','いくつでも選べます')+pcards(fL(),'fd',true,false);
+    b='<button class="big" data-go="1">'+(S.fd.length?S.fd.length+'つ選んで次へ':'次へ')+'</button>'
+      +(S.fd.length?'':'<button class="skip" data-go="1">選ばずに進む</button>') }
+  else if(k==='sp'){ h=head('寄りたい場所はありますか？','いくつでも選べます。これで最後です')+pcards(pL(),'sp',true,false);
+    b='<button class="big" data-go="1">'+(S.sp.length?'プランを見る':'このままプランを見る')+'</button>' }
+  else if(k==='r'){ h=result(); b='' }
+
+  app.innerHTML=h; bot.innerHTML=b;
+  bot.parentNode.style.display = b?'block':'none';
+  var pct = IDX===0?0 : Math.round((IDX)/(STEPS.length-1)*100);
+  document.querySelector('#pg i').style.width=pct+'%';
+  document.getElementById('cnt').textContent = (IDX>0&&IDX<STEPS.length-1)?IDX+'/8':'';
+  document.getElementById('back').classList.toggle('hide',IDX===0);
+  window.scrollTo(0,0); wURL();
+}
+
+/* ============ 操作 ============ */
+document.addEventListener('click',function(e){
+  var g=e.target.closest('[data-go]');
+  if(g){ IDX=Math.min(STEPS.length-1,IDX+ (+g.dataset.go)); screen(); return }
+  var one=e.target.closest('[data-one]');
+  if(one){ var k=one.dataset.one,v=one.dataset.v;
+    if(k==='g'||k==='e'||k==='y'){ S[k]=(k==='e')?+v:v; S.h=null; S.s=null;
+      one.classList.add('sel');
+      setTimeout(function(){IDX++;screen()},220); return }
+    if(k==='h'){ var hk0=by(HIKES,v); if(S.h===v){S.h=null}else{S.h=v; if(hk0.forceStay)S.s=hk0.forceStay;
+        else if(S.s&&by(STAYS,S.s)&&by(STAYS,S.s).onlyFor)S.s=null}
+      screen(); return }
+    if(k==='s'){ var hk1=S.h?by(HIKES,S.h):null;
+      if(hk1&&hk1.forceStay){toast('このコースはこの宿だけです');return}
+      S.s=(S.s===v)?null:v; screen(); return } }
+  var many=e.target.closest('[data-many]');
+  if(many){ var mk=many.dataset.many, mv=many.dataset.v, i=S[mk].indexOf(mv);
+    if(i>=0)S[mk].splice(i,1); else S[mk].push(mv);
+    screen(); return }
+});
+document.getElementById('back').onclick=function(){ if(IDX>0){IDX--;screen()} };
+
+/* ============ 費用 ============ */
+var AL={murodo:8180,oneway:4090,midagahara:6000,none:0};
+function cost(){
+  var hk=S.h?by(HIKES,S.h):null, st=S.s?by(STAYS,S.s):null, rows=[], tt=0, af=0;
+  if(S.sp.indexOf('s-kurobe')>=0)af=16480; else if(hk)af=AL[hk.alpen]||0;
+  if(af){rows.push(['ケーブルカーとバス',af]); tt+=af}
+  if(st){rows.push(['宿代（2食つき）',st.price]); tt+=st.price}
+  var of_=0; S.on.forEach(function(i){var o=by(ONSENS,i); if(!o)return;
+    if(st&&o.stayId===st.id)return; of_+=o.fee});
+  if(of_){rows.push(['温泉',of_]); tt+=of_}
+  var dr=route()==='tokai'?5500:5000; rows.push(['高速代とガソリン',dr]); tt+=dr;
+  var fd=S.fd.length*1800; if(fd){rows.push(['食事',fd]); tt+=fd}
+  return {rows:rows,total:tt}}
+
+/* ============ 行程 ============ */
+function fmt(m){var h=Math.floor(m/60),x=Math.round(m%60); if(x===60){h++;x=0} return h+':'+(x<10?'0':'')+x}
+function r10(m){return Math.round(m/10)*10}
+function Sq(){this.i=[]}
+Sq.prototype.add=function(m,a){if(m>0)this.i.push([r10(m),a]);return this};
+Sq.prototype.mk=function(a){this.i.push([0,a]);return this};
+Sq.prototype.fx=function(t,a){this.i.push([-1,a,t]);return this};
+Sq.prototype.tot=function(){var s=0;this.i.forEach(function(x){if(x[0]>0)s+=x[0]});return s};
+Sq.prototype.rd=function(st){var t=st,o=[];this.i.forEach(function(x){
+  if(x[0]===-1)o.push({t:x[2],a:x[1]});
+  else if(x[0]===0)o.push({t:fmt(t),a:x[1]});
+  else {o.push({t:fmt(t),a:x[1]});t+=x[0]}});this.end=t;return o};
+function sched(){
+  var hk=S.h?by(HIKES,S.h):null, st=S.s?by(STAYS,S.s):null;
+  var dr=route()==='tokai'?330:300;
+  var sum=st&&(st.area==='summit'||st.area==='mountain'), two=hk&&hk.two;
+  var sp=S.sp.map(function(i){return by(SPOTS,i)}).filter(Boolean);
+  var fo=S.fd.map(function(i){return by(FOODS,i)}).filter(Boolean);
+  var os=S.on.map(function(i){return by(ONSENS,i)}).filter(Boolean);
+  var gk=sp.filter(function(o){return o.area==='gokayama'}), ni=sp.filter(function(o){return o.night});
+  var uS={},uF={},uO={},done=false;
+  function tS(f){for(var i=0;i<sp.length;i++){var o=sp[i];if(!uS[o.id]&&!o.night&&f(o)){uS[o.id]=1;return o}}return null}
+  function tF(f){for(var i=0;i<fo.length;i++){var o=fo[i];if(!uF[o.id]&&f(o)){uF[o.id]=1;return o}}return null}
+  function tO(f){for(var i=0;i<os.length;i++){var o=os[i];if(!uO[o.id]&&f(o)){uO[o.id]=1;return o}}return null}
+  function T(){return true}
+  var A=new Sq(),B=new Sq(),s1,s2;
+  if(two){ s1=210;
+    A.add(dr,'車で立山駅へ');
+    if(gk.length){var g=tS(function(o){return o.area==='gokayama'});if(g)A.add(90,g.n)}
+    A.add(40,'駐車して、きっぷを受け取る');
+    A.add(70,'ケーブルカーとバスで山の上へ');
+    A.add(hk.h1||420,hk.d1||'1日目の山歩き');
+    A.mk('宿に到着、夕ごはん');
+    A.fx('夜',st&&st.id==='dainichigoya'?'ランプの灯りとギターの音':'星空を見る');
+  } else if(sum){ s1=240;
+    A.add(dr,'車で立山駅へ');
+    if(gk.length){var g2=tS(function(o){return o.area==='gokayama'});if(g2)A.add(90,g2.n)}
+    var sb=tS(function(o){return o.id==='s-sabo'}); if(sb)A.add(60,sb.n);
+    A.add(40,'駐車して、きっぷを受け取る');
+    A.add(70,'ケーブルカーとバスで山の上へ');
+    var lf=tF(function(o){return o.area==='tateyama'});
+    A.add(50,lf?(lf.n+'でお昼ごはん'):'山の上でお昼ごはん');
+    A.add(150,'池のまわりを散歩（ライチョウ探し）');
+    A.mk('宿にチェックイン');
+    var so=tO(function(o){return o.area==='summit'});
+    A.fx('夕方',so?(so.n+'に入る'):(st&&st.onsen?'宿のお風呂に入る':'ひと休み'));
+    A.fx('夜','夕ごはんと星空');
+  } else {
+    A.add(dr,'車で立山方面へ');
+    if(gk.length){var g3=tS(function(o){return o.area==='gokayama'});if(g3)A.add(120,g3.n)}
+    var l2=tF(function(o){return o.area==='gokayama'||o.area==='tateyama'});
+    if(l2)A.add(60,l2.n+'でお昼ごはん');
+    if(hk&&hk.alpen==='none'&&hk.tier<=2){A.add(hk.hrs*60,hk.n);done=true}
+    var x1=tS(function(o){return !o.heavy&&o.id!=='s-shomyo'}); if(x1)A.add(x1.hrs*60,x1.n);
+    var x2=tS(function(o){return !o.heavy&&o.id!=='s-shomyo'}); if(x2)A.add(x2.hrs*60,x2.n);
+    var fo2=tO(function(o){return o.area==='foot'}); if(fo2)A.add(90,fo2.n+'に入る');
+    A.mk('宿にチェックイン、夕ごはん');
+    ni.forEach(function(o){A.fx(o.id==='s-hanabi'?'19:20':'夜',o.n)});
+    s1=Math.max(300,Math.min(540,1050-A.tot()));
+  }
+  var d1=A.rd(s1), hut=two?(s1+A.tot()):null;
+  d1.unshift({t:fmt(s1),a:'大津京に集合、出発'});
+  if(two){ s2=300; B.add(60,'起きて朝ごはん、出発の準備');
+    B.add(hk.h2||240,hk.d2||'2日目の山歩き');
+    if(hk.id==='dainichi3')B.add(60,'称名滝を見る');
+    var o2=tO(T); if(o2)B.add(90,o2.n+'に入る');
+    var f2=tF(function(o){return o.area!=='gokayama'}); if(f2)B.add(80,f2.n+'を食べる');
+  } else if(sum){ s2=270;
+    B.add(40,'起きて朝ごはん');
+    B.add((hk?hk.hrs:2)*60,hk?hk.n:'山の上を散歩');
+    var o3=tO(function(o){return o.area==='summit'}); if(o3)B.add(80,o3.n+'に入る');
+    B.add(70,'バスとケーブルカーで下山');
+    var o4=tO(function(o){return o.area==='foot'}); if(o4)B.add(80,o4.n+'に入る');
+    if(!uS['s-shomyo']&&S.sp.indexOf('s-shomyo')>=0){uS['s-shomyo']=1;B.add(110,'称名滝を見る')}
+    var f3=tF(function(o){return o.area!=='gokayama'}); if(f3)B.add(80,f3.n+'を食べる');
+    var f3b=tF(function(o){return o.area!=='gokayama'}); if(f3b)B.add(50,f3b.n+'も食べる');
+    var x3=tS(function(o){return !o.heavy}); if(x3)B.add(x3.hrs*60,x3.n);
+    var o5=tO(function(o){return o.area==='far'}); if(o5)B.add(80,o5.n+'に入る');
+  } else {
+    s2=(hk&&!done&&hk.alpen!=='none')?300:360;
+    B.add(60,'起きて朝ごはん');
+    if(hk&&!done){
+      if(hk.alpen!=='none'){
+        B.add(40,'立山駅へ移動、きっぷを受け取る');
+        B.add(hk.alpen==='midagahara'?40:70,'ケーブルカーとバスで上へ');
+        B.add(hk.hrs*60,hk.n);
+        var o6=tO(function(o){return o.area==='summit'}); if(o6)B.add(80,o6.n+'に入る');
+        B.add(hk.alpen==='midagahara'?40:70,'バスとケーブルカーで下山');
+      } else B.add(hk.hrs*60,hk.n);
+      done=true}
+    if(!uS['s-shomyo']&&S.sp.indexOf('s-shomyo')>=0){uS['s-shomyo']=1;B.add(110,'称名滝を見る')}
+    var x4=tS(T); if(x4)B.add(x4.hrs*60,x4.n);
+    var o7=tO(T); if(o7)B.add(90,o7.n+'に入る');
+    var f5=tF(T); if(f5)B.add(80,f5.n+'を食べる');
+    var x5=tS(function(o){return !o.heavy}); if(x5)B.add(x5.hrs*60,x5.n);
+    var f6=tF(T); if(f6)B.add(50,f6.n+'も食べる');
+  }
+  var d2=B.rd(s2), dep=B.end;
+  d2.push({t:fmt(dep),a:'帰ります（大津京に '+fmt(dep+dr)+' ごろ着）'});
+  var left=[];
+  sp.forEach(function(o){if(!uS[o.id]&&!o.night)left.push(o.n)});
+  os.forEach(function(o){if(!uO[o.id])left.push(o.n)});
+  fo.forEach(function(o){if(!uF[o.id])left.push(o.n)});
+  return {d1:d1,d2:d2,arrive:dep+dr,left:left,hut:hut,start:s1}}
+
+/* ============ 注意 ============ */
+function notes(){
+  var W=[],hk=S.h?by(HIKES,S.h):null,st=S.s?by(STAYS,S.s):null;
+  var sum=st&&(st.area==='summit'||st.area==='mountain'), sc=sched();
+  if(sum&&S.sp.indexOf('s-hanabi')>=0)W.push('<b>花火には行けません。</b>山の上に泊まると、夜にふもとへ下りられないためです。花火に行くなら、ふもとの宿に変えてください。');
+  if(S.sp.indexOf('s-kurobe')>=0&&hk&&hk.tier>=2)W.push('<b>黒部ダムと山登りは同じ日にできません。</b>ダムは往復で6〜7時間かかります。どちらかを外してください。');
+  if(!sum&&st&&hk&&hk.alpen==='murodo'&&hk.tier>=3)W.push('<b>かなり早起きになります。</b>ふもとに泊まってこのコースを歩くには、朝いちばんのケーブルカーに乗る必要があります。');
+  if(sc.hut&&sc.hut>1020)W.push('<b>宿に着くのが '+fmt(sc.hut)+' になります。</b>山の宿の夕ごはんは17〜18時なので間に合いません。前の日の夜からふもとに泊まると解決します。');
+  if(sc.arrive>1410)W.push('<b>家に着くのが '+fmt(sc.arrive)+' ごろになります。</b>寄り道を1つ減らすと早くなります。');
+  if(sc.left.length)W.push('時間が足りず、<b>'+sc.left.join('・')+'</b> は行程に入りませんでした。');
+  return W}
+
+/* ============ 結果 ============ */
+function result(){
+  var hk=S.h?by(HIKES,S.h):null, st=S.s?by(STAYS,S.s):null;
+  var c=cost(), sc=sched(), W=notes();
+  var h='<div class="rz"><div class="ok">🏔</div><h1>プランができました</h1>'
+   +'<p>8月22日（土）〜 23日（日）／4人</p></div>';
+  h+='<div class="plan">'
+   +'<div class="lb">やること</div><div class="v1">'+(hk?hk.n:'—')+'</div><div class="v2">'+(hk?hk.k:'')+'</div>'
+   +'<hr><div class="lb">泊まるところ</div><div class="v1">'+(st?st.n:'—')+'</div><div class="v2">'+(st?st.k+'（2食つき）':'')+'</div>'
+   +'<hr><div class="lb">1人あたり</div><div class="money"><b>'+yen(c.total)+'</b><span>4人で '+yen(c.total*4)+'</span></div>'
+   +'</div>';
+  W.forEach(function(x){h+='<div class="note w"><span class="i">⚠️</span><span>'+x+'</span></div>'});
+  h+='<h2 class="s">当日の流れ</h2>';
+  h+='<div class="dayl">1日目　8月22日（土）</div><ul class="tl">';
+  sc.d1.forEach(function(r){h+='<li><span class="tm">'+r.t+'</span><span class="ac">'+r.a+'</span></li>'});
+  h+='</ul><div class="dayl">2日目　8月23日（日）</div><ul class="tl">';
+  sc.d2.forEach(function(r){h+='<li><span class="tm">'+r.t+'</span><span class="ac">'+r.a+'</span></li>'});
+  h+='</ul>';
+  h+='<h2 class="s">お金の内訳（1人分）</h2><ul class="tl">';
+  c.rows.forEach(function(r){h+='<li><span class="ac">'+r[0]+'</span><span class="tm" style="width:auto;text-align:right">'+yen(r[1])+'</span></li>'});
+  h+='<li><span class="ac" style="font-weight:800">合計</span><span class="tm" style="width:auto;text-align:right;font-size:1rem">'+yen(c.total)+'</span></li></ul>';
+  h+='<div class="note"><span class="i">·</span><span>高速代とガソリンは4人で割った金額です。食事は1回1,800円で計算しています。おみやげ代は入っていません。</span></div>';
+  var pick=[]; S.on.forEach(function(i){var o=by(ONSENS,i);if(o)pick.push(o.n)});
+  S.fd.forEach(function(i){var o=by(FOODS,i);if(o)pick.push(o.n)});
+  S.sp.forEach(function(i){var o=by(SPOTS,i);if(o)pick.push(o.n)});
+  if(pick.length)h+='<h2 class="s">選んだもの</h2><div class="pills">'+pick.map(function(n){return '<span>'+n+'</span>'}).join('')+'</div>';
+  h+='<h2 class="s">みんなに送る</h2><div class="acts">'
+   +'<button class="p" onclick="cpT()">プランをコピーして送る</button>'
+   +'<button onclick="cpL()">この画面のリンクをコピー</button>'
+   +'<button onclick="again()">もう一度やり直す</button></div>';
+  h+='<div class="foot">くわしい資料もあります<br>'
+   +'<a href="guide.html">写真と図で見る</a>　<a href="notes.html">文字で読む</a></div>';
+  return h}
+
+/* ============ 共有 ============ */
+function txt(){
+  var hk=S.h?by(HIKES,S.h):null, st=S.s?by(STAYS,S.s):null, c=cost(), sc=sched(), o=[];
+  o.push('【立山 8/22(土)-23(日) 4人】','');
+  o.push('やること：'+(hk?hk.n:'—'));
+  o.push('泊まる　：'+(st?st.n:'—'));
+  o.push('1人　　：'+yen(c.total)+'（4人で'+yen(c.total*4)+'）','');
+  o.push('■1日目 8/22(土)');
+  sc.d1.forEach(function(r){o.push(r.t+' '+r.a)});
+  o.push('','■2日目 8/23(日)');
+  sc.d2.forEach(function(r){o.push(r.t+' '+r.a)});
+  var W=notes(); if(W.length){o.push('','■気をつけること');
+    W.forEach(function(x){o.push('・'+x.replace(/<[^>]+>/g,''))})}
+  return o.join('\n')}
+function cp(s,m){var t=document.getElementById('ta'); t.value=s; t.style.left='0';
+  t.select(); t.setSelectionRange(0,999999); var ok=false;
+  try{ok=document.execCommand('copy')}catch(e){}
+  t.style.left='-9999px';
+  if(!ok&&navigator.clipboard){navigator.clipboard.writeText(s).then(function(){toast(m)},function(){toast('コピーできませんでした')});return}
+  toast(ok?m:'コピーできませんでした')}
+function cpT(){cp(txt(),'コピーしました')}
+function cpL(){wURL();cp(location.href,'リンクをコピーしました')}
+function again(){S={g:null,e:null,y:null,h:null,s:null,on:[],fd:[],sp:[]};IDX=0;
+  history.replaceState(null,'',location.pathname);screen()}
+function toast(m){var t=document.getElementById('toast');t.textContent=m;t.classList.add('on');
+  setTimeout(function(){t.classList.remove('on')},2000)}
+
+/* ============ 起動 ============ */
+(function(){ var had=rURL(); BOOT=false;
+  if(!had)IDX=0;
+  else{ if(IDX>=4&&!S.g)IDX=1; if(IDX>=8&&!S.h)IDX=4; if(IDX>STEPS.length-1)IDX=STEPS.length-1 }
+  screen() })();
+</script>
 </body>
 </html>
