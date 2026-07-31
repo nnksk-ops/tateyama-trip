@@ -376,7 +376,7 @@ function pcards(list,key,multi,hike){
     var t3 = hike ? (TSUKARE[o.st]+'・'+HITO[o.cr]) : o.d;
     return '<button class="pc'+(sel?' sel':'')+'" data-'+(multi?'many':'one')+'="'+key+'" data-v="'+o.id+'">'
       +'<span class="im">'+(o.rank==='S'?'<span class="osusume">おすすめ</span>':'')
-      +'<img loading="lazy" src="'+o.img+'" alt=""></span>'
+      +'<img loading="lazy" src="'+o.img+'" alt="" onerror="this.onerror=null;this.src=\''+P.alps+'\'"></span>'
       +'<span class="bd"><span class="tx"><span class="t1">'+o.n+'</span>'
       +'<span class="t2">'+o.k+'</span><span class="t3">'+t3+'</span></span>'
       +'<span class="mk">✓</span></span></button>'}).join('')+'</div>'}
